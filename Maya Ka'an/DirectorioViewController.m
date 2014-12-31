@@ -31,15 +31,276 @@
     [super viewDidLoad];
     self.items = [[NSMutableArray alloc] init];
     NSArray *directoryItems=
-                @[
-                   @{
-                       @"title":@"Kiichpam K’áax (Selva Bonita) Cooperativa",
-                       @"phone":@"+52 (983) 114 31 21"
+            @[
+                  
+                  @{
+                    @"section":@"CHUNHUHUB",
+                    @"content":
+                        @[
+                            @{
+                                @"subsection":@"Kiichpam K’áax (Selva Bonita)",
+                                @"contacts":
+                                    @[
+                                        @{
+                                            @"title":@"Cooperativa",
+                                            @"phones":@[@"+52 (983) 114 31 21"],
+                                            @"emails":@[]
+                                        },
+                                        @{
+                                            @"title":@"Damian Leonel Gómez Xool.",
+                                            @"phone":@[@"+521 (983) 113 28 82"],
+                                            @"emails":@[]
+                                        },
+                                        @{
+                                            @"title":@"Lizeth Del C. Vega Álvarez.",
+                                            @"phone":@[@"+521 (983) 165 56 77"],
+                                            @"emails":@[]
+                                        },
+                                        
+                                    ],
+                                @"emails":@[@"ecoturismo_kiichpam.kaxx@hotmail.com",@"selvabonita@outlook.com"],
+                                @"web":@"",
+                                @"facebook":@"www.facebook.com/selvabonita"
+                            },
+                           
+                        ]
+                   },
+                  
+                  
+                  @{
+                    @"section":@"FELIPE CARRILLO PUERTO",
+                    @"content":
+                      @[
+                          @{
+                              @"subsection":@"Centro Recreativo Eco turístico Balam Nah",
+                              @"contacts":
+                                  @[
+                                      @{
+                                          @"title":@"Bruno Fabián Martínez Martin.",
+                                          @"phones":@[@"+521 (983) 102 07 16",@"+521 (983) 120 66 76"],
+                                          @"emails":@[@"corazonyvidamayatours@gmail.com",@"arre@gmail.com"]
+                                        },
+                                    ],
+                              @"emails":@[@"eco-balam-nah@hotmail.com",@"ecoh@hotmail.com"],
+                              @"web":@"",
+                              @"facebook":@"www.facebook.com/eco.balam.nah"
+                           },
+                          @{
+                              @"subsection":@"Centro Comunitario de Arte y Filosofía Maya Raxalaj Mayab",
+                              @"contacts":
+                                  @[
+                                      @{
+                                          @"title":@"Columba Marin Martínez",
+                                          @"phones":@[@"+521 (983) 106 02 39"],
+                                          @"emails":@[]
+                                        },
+                                    ],
+                              @"emails":@[],
+                              @"web":@"",
+                              @"facebook":@"www.facebook.com/artemaya.raxalajmayab"
+                           },
+                          @{
+                              @"subsection":@"CorazonyVidaMaya",
+                              @"contacts":
+                                  @[
+                                      @{
+                                          @"title":@"Anaid Corona",
+                                          @"phones":@[@"+521 (998) 222 22 50"],
+                                          @"emails":@[]
+                                       },
+                                   ],
+                              @"emails":@[@"corazonyvidamayatours@gmail.com"],
+                              @"web":@"www.corazonyvidamaya.com",
+                              @"facebook":@"www.facebook.com/CorazonyVidaMaya"
+                            },
+                          @{
+                              @"subsection":@"Ejido Felipe Carrillo Puerto",
+                              @"contacts":
+                                  @[
+                                      @{
+                                          @"title":@"Oficinas",
+                                          @"phones":@[@"+52 (998) 01 983 40525"],
+                                          @"emails":@[]
+                                        },
+                                    ],
+                              @"emails":@[@"ejidofcp@gmail.com"],
+                              @"web":@"",
+                              @"facebook":@"www.facebook.com/siijilnohha.ecoturismo?fref=ts"
+                           },
+
+                      ]
+                 },
+                  
+                  
+                @{
+                  @"section":@"KANTEMÓ",
+                  @"content":
+                      @[
+                          @{
+                              @"subsection":@"Centro Eco turístico Beej Ka´ax Ha.",
+                              @"contacts":
+                                  @[
+                                      @{
+                                          @"title":@"Baltazar L. Borges Cob",
+                                          @"phones":@[@"+521 (045) 997 977 44 87",@"+521 (045) 997 977 49 20"],
+                                          @"emails":@[@"bejkaxha@yahoo.com.mx"]
+                                        },
+                                    ],
+                              @"emails":@[],
+                              @"web":@"",
+                              @"facebook":@""
+                           },
+                       ]
+                 },
+                  
+                  
+                @{
+                  @"section":@"MUYIL",
+                  @"content":
+                      @[
+                          @{
+                              @"subsection":@"Community Tours Sian Ka´an",
+                              @"contacts":
+                                  @[
+                                      @{
+                                          @"title":@"Yolanda Caamal Pacheco",
+                                          @"phones":@[@"+52 (984) 8712202",@"+ 52 (984) 1456148"],
+                                          @"emails":@[@""]
+                                        },
+                                   ],
+                              @"emails":@[@"info@siankaantours.org"],
+                              @"web":@"www.siankaantours.org",
+                              @"facebook":@"Community Tours Sian Kaan"
+                           },
+                          @{
+                              @"subsection":@"Uyo Ochel Maya",
+                              @"contacts":
+                                  @[
+                                      @{
+                                          @"title":@"Candido Caamal",
+                                          @"phones":@[@"+521 (984) 141 83 56"],
+                                          @"emails":@[]
+                                        },
+                                    ],
+                              @"emails":@[@"caamaltours@hotmail.com",@"uyoochel_mayatours@hotmail.com"],
+                              @"web":@"",
+                              @"facebook":@""
+                            },
+                        ]
+                  },
+                  
+                  
+                  @{
+                    @"section":@"NOH-BEC",
+                    @"content":
+                          @[
+                              @{
+                                  @"subsection":@"Ejido Noh-Bec",
+                                  @"contacts":
+                                      @[
+                                          @{
+                                              @"title":@"Raciel González Reyes",
+                                              @"phones":@[@"+52 (983) 2086034"],
+                                              @"emails":@[]
+                                            },
+                                        ],
+                                  @"emails":@[@"ejido_nohbec@hotmail.com"],
+                                  @"web":@"",
+                                  @"facebook":@""
+                                },
+                             
+                           ]
+                   },
+                  
+                  
+                  @{
+                    @"section":@"PUNTA ALLEN",
+                    @"content":
+                          @[
+                              @{
+                                  @"subsection":@"Alianza Punta Allen",
+                                  @"contacts":
+                                      @[
+                                          @{
+                                              @"title":@"Juan Carlos Rendón",
+                                              @"phones":@[@"+521 (984)113 04 74"],
+                                              @"emails":@[@"pezcharly@gmail.com"]
+                                            },
+                                        ],
+                                  @"emails":@[],
+                                  @"web":@"",
+                                  @"facebook":@""
+                               },
+                              @{
+                                  @"subsection":@"Na´tour Sian Ka´an",
+                                  @"contacts":
+                                      @[
+                                          @{
+                                              @"title":@"María de la Cruz Mendoza Mendoza",
+                                              @"phones":@[@"+521 (984) 113 40 03",@"+52 883 123 45 67"],
+                                              @"emails":@[@"ecotourmujersian-kaan@hotmail.com"]
+                                            },
+                                        ],
+                                  @"emails":@[],
+                                  @"web":@"www.natoursiankaan.com",
+                                  @"facebook":@""
+                                },
+                              
+                           ]
                     },
-                   @{
-                       @"title":@"Damian Leonel Gómez Xool.",
-                       @"phone":@"+521 (983) 113 28 82"}
-                 ];
+                  
+                  
+                  @{
+                    @"section":@"PUNTA HERRERO",
+                    @"content":@[]
+                    },
+                  
+                  
+                  @{
+                    @"section":@"SEÑOR",
+                    @"content":
+                          @[
+                              @{
+                                  @"subsection":@"Xyaat",
+                                  @"contacts":
+                                      @[
+                                          @{
+                                              @"title":@"Marcos A. Cante Canul",
+                                              @"phones":@[@"+521 (983)1067624"],
+                                              @"emails":@[@"marcos@xyaat.com"]
+                                            },
+                                        ],
+                                  @"emails":@[@"xyaat@hotmail.com "],
+                                  @"web":@"",
+                                  @"facebook":@"xyaatculturamaya"
+                                }
+                              
+                           ]
+                   },
+                  
+                  
+                  @{
+                    @"section":@"TIHOSUCO",
+                    @"content":
+                          @[
+                              @{
+                                  @"subsection":@"U Belilek Kaxtik Kuxtal",
+                                  @"contacts":
+                                      @[
+                                          @{
+                                              @"title":@"Carlos Chan Espinosa",
+                                              @"phones":@[@"+521 (983) 103 03 67"],
+                                              @"emails":@[@"ubkk_1@hotmail.com",@"chancarlos26@hotmail.com"]
+                                            },
+                                       ],
+                                  @"emails":@[],
+                                  @"web":@"",
+                                  @"facebook":@""
+                                }
+                              
+                          ]
+                   },
+            ];
     
     for (NSArray *dataDictionary in directoryItems){
         [self.items addObject:dataDictionary];
@@ -96,7 +357,7 @@
     section2.colorForBackground = self.rowColor;
     section2.image = [UIImage imageNamed:@"linkdin_Email"];
     
-    UIView *viewOfSection3 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
+    UIView *viewOfSection3 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 500)];
     
    // UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
    // [button setTitle:@"click meeeeeee" forState:UIControlStateNormal];
@@ -107,21 +368,65 @@
     
     
     int i= 50;
-    for (NSDictionary *myitems in self.items){
+    for (NSDictionary *myitems in self.items[1][@"content"]){
         NSLog(@"%i",i);
-        UILabel *cTitle = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 320, i)];
-        [cTitle setText:myitems[@"title"]];
-        [cTitle setFont:[UIFont boldSystemFontOfSize:11]];
-        [cTitle setTextColor:[UIColor grayColor]];
-        [viewOfSection3 addSubview:cTitle];
         
-        UILabel *cPhone = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width, i+30)];
-        [cPhone setText:myitems[@"phone"]];
-        [cPhone setFont:[UIFont fontWithName:@"Helvetica" size:11]];
-        [cPhone setTextColor:[UIColor grayColor]];
-        [viewOfSection3 addSubview:cPhone];
+        UILabel *cSubsection = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 320, i)];
+        [cSubsection setText:myitems[@"subsection"]];
+        [cSubsection setFont:[UIFont boldSystemFontOfSize:14]];
+        [cSubsection setTextColor:[UIColor grayColor]];
+        [viewOfSection3 addSubview:cSubsection];
+        i=i+40;
+        for (NSDictionary *contacts in myitems[@"contacts"]){
+            
+            UILabel *cTitle = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 320, i)];
+            [cTitle setText:contacts[@"title"]];
+            [cTitle setFont:[UIFont boldSystemFontOfSize:11]];
+            [cTitle setTextColor:[UIColor grayColor]];
+            [viewOfSection3 addSubview:cTitle];
+            
+            
+            for (NSString *phone in contacts[@"phones"]){
+            
+                UILabel *cPhone = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width, i+30)];
+                [cPhone setText:phone];
+                [cPhone setFont:[UIFont fontWithName:@"Helvetica" size:11]];
+                [cPhone setTextColor:[UIColor grayColor]];
+                [viewOfSection3 addSubview:cPhone];
+                i=i+30;
+            }
+#warning            //falta agregar for con emails de contacto
+            
+            NSLog(@"%i",i);
+        
+        }
+        
+        for (NSString *email in myitems[@"emails"]){
+            UILabel *cEmail = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width, i+30)];
+            [cEmail setText:email];
+            [cEmail setFont:[UIFont fontWithName:@"Helvetica" size:11]];
+            [cEmail setTextColor:[UIColor grayColor]];
+            [viewOfSection3 addSubview:cEmail];
+            i=i+30;
+        
+        }
+        if ([myitems[@"web"] length] != 0) {
+            UILabel *cWeb = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width, i+30)];
+            [cWeb setText:myitems[@"web"]];
+            [cWeb setFont:[UIFont fontWithName:@"Helvetica" size:11]];
+            [cWeb setTextColor:[UIColor grayColor]];
+            [viewOfSection3 addSubview:cWeb];
+            i=i+30;
+        }
+        if ([myitems[@"facebook"] length] != 0) {
+            UILabel *cFacebook = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width, i+30)];
+            [cFacebook setText:myitems[@"facebook"]];
+            [cFacebook setFont:[UIFont fontWithName:@"Helvetica" size:11]];
+            [cFacebook setTextColor:[UIColor grayColor]];
+            [viewOfSection3 addSubview:cFacebook];
+        }
         i=i+80;
-        NSLog(@"%i",i);
+        
     }
     
     
