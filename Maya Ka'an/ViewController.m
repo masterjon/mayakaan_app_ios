@@ -21,7 +21,7 @@
                       @{
                           @"title":@"Destinos",
                           @"image":@"icono-destinos",
-                          @"target":@""
+                          @"target":@"DestinosViewController"
                         },
                       @{
                           @"title":@"Escapadas",
@@ -36,7 +36,7 @@
                       @{
                           @"title":@"Directorio",
                           @"image":@"icono-directorio",
-                          @"target":@""
+                          @"target":@"DirectorioViewController"
                         },
                       @{
                           @"title":@"Tips",
@@ -78,6 +78,11 @@
     return cell;
 }
 -(void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary *menuItemDictionary = [self.menuItems objectAtIndex:indexPath.row];
+    
+        ViewController *viewC = [self.storyboard instantiateViewControllerWithIdentifier:menuItemDictionary[@"target"]];
+        [self.navigationController pushViewController:viewC animated:YES];
+        
 
 }
 @end
