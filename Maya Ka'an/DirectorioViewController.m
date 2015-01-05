@@ -48,12 +48,12 @@
                                         },
                                         @{
                                             @"title":@"Damian Leonel Gómez Xool.",
-                                            @"phone":@[@"+521 (983) 113 28 82"],
+                                            @"phones":@[@"+521 (983) 113 28 82"],
                                             @"emails":@[]
                                         },
                                         @{
                                             @"title":@"Lizeth Del C. Vega Álvarez.",
-                                            @"phone":@[@"+521 (983) 165 56 77"],
+                                            @"phones":@[@"+521 (983) 165 56 77"],
                                             @"emails":@[]
                                         },
                                         
@@ -78,10 +78,10 @@
                                       @{
                                           @"title":@"Bruno Fabián Martínez Martin.",
                                           @"phones":@[@"+521 (983) 102 07 16",@"+521 (983) 120 66 76"],
-                                          @"emails":@[@"corazonyvidamayatours@gmail.com",@"arre@gmail.com"]
+                                          @"emails":@[]
                                         },
                                     ],
-                              @"emails":@[@"eco-balam-nah@hotmail.com",@"ecoh@hotmail.com"],
+                              @"emails":@[@"eco-balam-nah@hotmail.com"],
                               @"web":@"",
                               @"facebook":@"www.facebook.com/eco.balam.nah"
                            },
@@ -165,7 +165,7 @@
                                       @{
                                           @"title":@"Yolanda Caamal Pacheco",
                                           @"phones":@[@"+52 (984) 8712202",@"+ 52 (984) 1456148"],
-                                          @"emails":@[@""]
+                                          @"emails":@[]
                                         },
                                    ],
                               @"emails":@[@"info@siankaantours.org"],
@@ -336,150 +336,103 @@
 
 - (NSArray *)getSectionArray {
 
-    UIView *viewOfSection1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 500)];
-    viewOfSection1.backgroundColor = [UIColor grayColor];
-    KMSection *section1 = [[KMSection alloc] init];
-    section1.view = viewOfSection1;
-    section1.title = [@"CHUNHUHUB" capitalizedString];
-    
-    section1.colorForBackground = self.rowColor; // individual background color for a specific section, overrides the general color if set
-    section1.image = [UIImage imageNamed:@"icono-escapadas"];
-    
-    UIView *minhaview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
-    minhaview.backgroundColor = [UIColor redColor];
-    section1.overHeaderView = minhaview;
-    
-    UIView *viewOfSection2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 300)];
-    viewOfSection2.backgroundColor = [UIColor redColor];
-    KMSection *section2 = [[KMSection alloc] init];
-    section2.view = viewOfSection2;
-    section2.title = [@"FELIPE CARRILLO PUERTO" capitalizedString];
-    section2.colorForBackground = self.rowColor;
-    section2.image = [UIImage imageNamed:@"linkdin_Email"];
-    
-    UIView *viewOfSection3 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 500)];
-    
-   // UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
-   // [button setTitle:@"click meeeeeee" forState:UIControlStateNormal];
-   // [button addTarget:self action:@selector(teste) forControlEvents:UIControlEventTouchUpInside];
-   // [viewOfSection3 addSubview:button];
-    
-    
-    
-    
-    int i= 50;
-    for (NSDictionary *myitems in self.items[1][@"content"]){
-        NSLog(@"%i",i);
+    NSMutableArray *listArray = [[NSMutableArray alloc] init];
+    int ident = 20;
+    for (NSDictionary *section in self.items ){
         
-        UILabel *cSubsection = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 320, i)];
-        [cSubsection setText:myitems[@"subsection"]];
-        [cSubsection setFont:[UIFont boldSystemFontOfSize:14]];
-        [cSubsection setTextColor:[UIColor grayColor]];
-        [viewOfSection3 addSubview:cSubsection];
-        i=i+40;
-        for (NSDictionary *contacts in myitems[@"contacts"]){
-            
-            UILabel *cTitle = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 320, i)];
-            [cTitle setText:contacts[@"title"]];
-            [cTitle setFont:[UIFont boldSystemFontOfSize:11]];
-            [cTitle setTextColor:[UIColor grayColor]];
-            [viewOfSection3 addSubview:cTitle];
-            
-            
-            for (NSString *phone in contacts[@"phones"]){
-            
-                UILabel *cPhone = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width, i+30)];
-                [cPhone setText:phone];
-                [cPhone setFont:[UIFont fontWithName:@"Helvetica" size:11]];
-                [cPhone setTextColor:[UIColor grayColor]];
-                [viewOfSection3 addSubview:cPhone];
+        UIView *viewOfSection = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 0)];
+        int i = 50;
+        int height = 0;
+        for (NSDictionary *myitems in section[@"content"]){
+
+            UILabel *cSubsection = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width, i)];
+            [cSubsection setText:myitems[@"subsection"]];
+            [cSubsection setFont:[UIFont boldSystemFontOfSize:14]];
+            [cSubsection setTextColor:[UIColor grayColor]];
+            [viewOfSection addSubview:cSubsection];
+            i=i+30;
+            height=height+10;
+
+            for (NSDictionary *contacts in myitems[@"contacts"]){
+                UILabel *cTitle = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width, i)];
+                [cTitle setText:contacts[@"title"]];
+                [cTitle setFont:[UIFont boldSystemFontOfSize:11]];
+                [cTitle setTextColor:[UIColor grayColor]];
+                [viewOfSection addSubview:cTitle];
                 i=i+30;
+                height=height+30;
+                for (NSString *phone in contacts[@"phones"]){
+                    
+                    UILabel *cPhone = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width, i)];
+                    [cPhone setText:phone];
+                    [cPhone setFont:[UIFont fontWithName:@"Helvetica" size:11]];
+                    [cPhone setTextColor:[UIColor grayColor]];
+                    [viewOfSection addSubview:cPhone];
+                    i=i+30;
+                    height=height+30;
+                }
+                for (NSString *email in contacts[@"emails"]){
+                    
+                    UILabel *cEmail = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width, i)];
+                    [cEmail setText:email];
+                    [cEmail setFont:[UIFont fontWithName:@"Helvetica" size:11]];
+                    [cEmail setTextColor:[UIColor grayColor]];
+                    [viewOfSection addSubview:cEmail];
+                    i=i+30;
+                    height=height+30;
+                
+                }
+                i=i+20;
+                
+
             }
-#warning            //falta agregar for con emails de contacto
             
-            NSLog(@"%i",i);
-        
+
+            for (NSString *email in myitems[@"emails"]){
+                UILabel *Email = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width, i)];
+                [Email setText:email];
+                [Email setFont:[UIFont fontWithName:@"Helvetica" size:11]];
+                [Email setTextColor:[UIColor grayColor]];
+                [viewOfSection addSubview:Email];
+                i=i+30;
+                height=height+30;
+
+            }
+            if ([myitems[@"web"] length] != 0) {
+                UILabel *cWeb = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width, i)];
+                [cWeb setText:myitems[@"web"]];
+                [cWeb setFont:[UIFont fontWithName:@"Helvetica" size:11]];
+                [cWeb setTextColor:[UIColor grayColor]];
+                [viewOfSection addSubview:cWeb];
+                i=i+30;
+                height=height+30;
+            }
+            if ([myitems[@"facebook"] length] != 0) {
+                UILabel *cFacebook = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width, i)];
+                [cFacebook setText:myitems[@"facebook"]];
+                [cFacebook setFont:[UIFont fontWithName:@"Helvetica" size:11]];
+                [cFacebook setTextColor:[UIColor grayColor]];
+                [viewOfSection addSubview:cFacebook];
+            }
+            
+            i=i+60;
+
         }
-        
-        for (NSString *email in myitems[@"emails"]){
-            UILabel *cEmail = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width, i+30)];
-            [cEmail setText:email];
-            [cEmail setFont:[UIFont fontWithName:@"Helvetica" size:11]];
-            [cEmail setTextColor:[UIColor grayColor]];
-            [viewOfSection3 addSubview:cEmail];
-            i=i+30;
-        
-        }
-        if ([myitems[@"web"] length] != 0) {
-            UILabel *cWeb = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width, i+30)];
-            [cWeb setText:myitems[@"web"]];
-            [cWeb setFont:[UIFont fontWithName:@"Helvetica" size:11]];
-            [cWeb setTextColor:[UIColor grayColor]];
-            [viewOfSection3 addSubview:cWeb];
-            i=i+30;
-        }
-        if ([myitems[@"facebook"] length] != 0) {
-            UILabel *cFacebook = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width, i+30)];
-            [cFacebook setText:myitems[@"facebook"]];
-            [cFacebook setFont:[UIFont fontWithName:@"Helvetica" size:11]];
-            [cFacebook setTextColor:[UIColor grayColor]];
-            [viewOfSection3 addSubview:cFacebook];
-        }
-        i=i+80;
-        
+        NSLog(@"%i -- %@",i,section[@"section"]);
+        viewOfSection.frame = CGRectMake(0, 0, self.view.frame.size.width, height);
+        KMSection *section3 = [[KMSection alloc] init];
+        section3.view = viewOfSection;
+        section3.title = [section[@"section"] capitalizedString];
+        section3.colorForBackground = self.rowColor;
+        section3.image = [UIImage imageNamed:@"Skype_Email"];
+        [listArray  addObject:section3];
+
     }
     
     
-    KMSection *section3 = [[KMSection alloc] init];
-    section3.view = viewOfSection3;
-    section3.title = [@"KANTEMÓ" capitalizedString];
-    section3.colorForBackground = self.rowColor;
-    section3.image = [UIImage imageNamed:@"Skype_Email"];
     
-    UIView *viewOfSection5 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
-    viewOfSection5.backgroundColor = [UIColor redColor];
-    KMSection *section5 = [[KMSection alloc] init];
-    section5.view = viewOfSection5;
-    section5.title = [@"MUYIL" capitalizedString];
-    section5.colorForBackground = self.rowColor;
-    section5.image = [UIImage imageNamed:@"facebook_email"];
     
-    UIView *viewOfSection6 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 700)];
-    viewOfSection6.backgroundColor = [UIColor greenColor];
-    KMSection *section6 = [[KMSection alloc] init];
-    section6.view = viewOfSection6;
-    section6.title = [@"NOH-BEC" capitalizedString];
-    section6.colorForBackground = self.rowColor;
-    section6.image = [UIImage imageNamed:@"Skype_Email"];
-    
-    UIView *viewOfSection7 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 700)];
-    viewOfSection7.backgroundColor = [UIColor greenColor];
-    KMSection *section7 = [[KMSection alloc] init];
-    section7.view = viewOfSection7;
-    section7.title = [@"PUNTA ALLEN" capitalizedString];
-    section7.colorForBackground = self.rowColor;
-    section7.image = [UIImage imageNamed:@"Skype_Email"];
-
-    
-    UIView *viewOfSection8 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 700)];
-    viewOfSection8.backgroundColor = [UIColor colorWithRed:0.216 green:0.773 blue:0.847 alpha:1]; /*#37c5d8*/
-    KMSection *section8 = [[KMSection alloc] init];
-    section8.view = viewOfSection8;
-    section8.title = [@"TIHOSUCO" capitalizedString];
-    section8.colorForBackground = self.rowColor; /*#37c5d8*/
-    section8.image = [UIImage imageNamed:@"Skype_Email"];
-
-    
-    UIView *viewOfSection9 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 700)];
-    viewOfSection9.backgroundColor = [UIColor whiteColor];
-    KMSection *section9 = [[KMSection alloc] init];
-    section9.view = viewOfSection9;
-    section9.title = [@"NOH-BEC" capitalizedString];
-    section9.colorForBackground = self.rowColor;
-    section9.image = [UIImage imageNamed:@"Skype_Email"];
-
-    
-    return @[section1, section2, section3, section5, section6, section7, section8, section9];
+    return listArray;
 }
 
 #pragma mark - KMAccordionTableViewControllerDelegate
