@@ -41,7 +41,7 @@
                       @{
                           @"title":@"Tips",
                           @"image":@"icono-tips",
-                          @"target":@""
+                          @"target":@"TipsViewController"
                         },
                       @{
                           @"title":@"Mapa",

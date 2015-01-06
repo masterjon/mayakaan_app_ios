@@ -340,21 +340,21 @@
     int ident = 20;
     for (NSDictionary *section in self.items ){
         
-        UIView *viewOfSection = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 0)];
+        UIView *viewOfSection = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width-40, 0)];
         int i = 50;
         int height = 0;
         for (NSDictionary *myitems in section[@"content"]){
 
-            UILabel *cSubsection = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width, i)];
+            UILabel *cSubsection = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width-40, i)];
             [cSubsection setText:myitems[@"subsection"]];
-            [cSubsection setFont:[UIFont boldSystemFontOfSize:14]];
+            [cSubsection setFont:[UIFont boldSystemFontOfSize:12]];
             [cSubsection setTextColor:[UIColor grayColor]];
             [viewOfSection addSubview:cSubsection];
             i=i+30;
             height=height+10;
 
             for (NSDictionary *contacts in myitems[@"contacts"]){
-                UILabel *cTitle = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width, i)];
+                UILabel *cTitle = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width-40, i)];
                 [cTitle setText:contacts[@"title"]];
                 [cTitle setFont:[UIFont boldSystemFontOfSize:11]];
                 [cTitle setTextColor:[UIColor grayColor]];
@@ -363,7 +363,7 @@
                 height=height+30;
                 for (NSString *phone in contacts[@"phones"]){
                     
-                    UILabel *cPhone = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width, i)];
+                    UILabel *cPhone = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width-40, i)];
                     [cPhone setText:phone];
                     [cPhone setFont:[UIFont fontWithName:@"Helvetica" size:11]];
                     [cPhone setTextColor:[UIColor grayColor]];
@@ -373,7 +373,7 @@
                 }
                 for (NSString *email in contacts[@"emails"]){
                     
-                    UILabel *cEmail = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width, i)];
+                    UILabel *cEmail = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width-40, i)];
                     [cEmail setText:email];
                     [cEmail setFont:[UIFont fontWithName:@"Helvetica" size:11]];
                     [cEmail setTextColor:[UIColor grayColor]];
@@ -389,7 +389,7 @@
             
 
             for (NSString *email in myitems[@"emails"]){
-                UILabel *Email = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width, i)];
+                UILabel *Email = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width-40, i)];
                 [Email setText:email];
                 [Email setFont:[UIFont fontWithName:@"Helvetica" size:11]];
                 [Email setTextColor:[UIColor grayColor]];
@@ -399,7 +399,7 @@
 
             }
             if ([myitems[@"web"] length] != 0) {
-                UILabel *cWeb = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width, i)];
+                UILabel *cWeb = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width-40, i)];
                 [cWeb setText:myitems[@"web"]];
                 [cWeb setFont:[UIFont fontWithName:@"Helvetica" size:11]];
                 [cWeb setTextColor:[UIColor grayColor]];
@@ -408,7 +408,7 @@
                 height=height+30;
             }
             if ([myitems[@"facebook"] length] != 0) {
-                UILabel *cFacebook = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width, i)];
+                UILabel *cFacebook = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width-40, i)];
                 [cFacebook setText:myitems[@"facebook"]];
                 [cFacebook setFont:[UIFont fontWithName:@"Helvetica" size:11]];
                 [cFacebook setTextColor:[UIColor grayColor]];
@@ -419,7 +419,7 @@
 
         }
         NSLog(@"%i -- %@",i,section[@"section"]);
-        viewOfSection.frame = CGRectMake(0, 0, self.view.frame.size.width, height);
+        viewOfSection.frame = CGRectMake(0, 0, self.view.frame.size.width-40, height);
         KMSection *section3 = [[KMSection alloc] init];
         section3.view = viewOfSection;
         section3.title = [section[@"section"] capitalizedString];

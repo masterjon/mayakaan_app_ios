@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BCA6C4051A5B5005003B495E /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA6C4041A5B5005003B495E /* TipsViewController.m */; };
 		FB79C8561A51CDBA00755704 /* DestinosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB79C8551A51CDBA00755704 /* DestinosViewController.m */; };
 		FB79C8591A521D8100755704 /* DirectorioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB79C8581A521D8100755704 /* DirectorioViewController.m */; };
 		FBFB3D461A49F31E008DE9B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB3D451A49F31E008DE9B6 /* main.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BCA6C4031A5B5005003B495E /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
+		BCA6C4041A5B5005003B495E /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
 		FB79C8541A51CDBA00755704 /* DestinosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinosViewController.h; sourceTree = "<group>"; };
 		FB79C8551A51CDBA00755704 /* DestinosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinosViewController.m; sourceTree = "<group>"; };
 		FB79C8571A521D8100755704 /* DirectorioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorioViewController.h; sourceTree = "<group>"; };
@@ -119,6 +122,8 @@
 				FB79C8551A51CDBA00755704 /* DestinosViewController.m */,
 				FB79C8571A521D8100755704 /* DirectorioViewController.h */,
 				FB79C8581A521D8100755704 /* DirectorioViewController.m */,
+				BCA6C4031A5B5005003B495E /* TipsViewController.h */,
+				BCA6C4041A5B5005003B495E /* TipsViewController.m */,
 			);
 			path = "Maya Ka'an";
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 				FBFB3D491A49F31E008DE9B6 /* AppDelegate.m in Sources */,
 				FBFE07A51A530A7D00CF3AC0 /* KMSection.m in Sources */,
 				FBFE07A71A530A7D00CF3AC0 /* MyViewController.m in Sources */,
+				BCA6C4051A5B5005003B495E /* TipsViewController.m in Sources */,
 				FBFE07A41A530A7D00CF3AC0 /* KMAppearence.m in Sources */,
 				FBFB3D461A49F31E008DE9B6 /* main.m in Sources */,
 				FB79C8561A51CDBA00755704 /* DestinosViewController.m in Sources */,
