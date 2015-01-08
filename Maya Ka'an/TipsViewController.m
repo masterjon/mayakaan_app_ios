@@ -201,7 +201,7 @@
     [self setHeaderTitleColor:[UIColor whiteColor]];
     [self setHeaderSeparatorColor:[UIColor whiteColor]];
     [self setHeaderColor:[UIColor colorWithRed:0.114 green:0.114 blue:0.114 alpha:1]]; //general background color for all of the sections
-    [self setOneSectionAlwaysOpen:NO]; // set if one section should always be open. if set to YES, the VC will load with the first section already open, and the open section will not close unless you click a different section
+    [self setOneSectionAlwaysOpen:YES]; // set if one section should always be open. if set to YES, the VC will load with the first section already open, and the open section will not close unless you click a different section
 }
 
 - (void)teste {
@@ -214,7 +214,32 @@
 
 - (NSArray *)getSectionArray {
     
+    
+    
+   
+
     NSMutableArray *listArray = [[NSMutableArray alloc] init];
+    
+/*
+    UITableView *testSection = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
+    KMSection *section0 = [[KMSection alloc] init];
+    section0.view = testSection;
+    section0.title = @"Test";
+    section0.colorForBackground = self.rowColor;
+    //Update data source with the object that you need to add
+   UITableViewCell *firstNameCell = [[UITableViewCell alloc] init];
+    firstNameCell.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
+    UILabel *firstNameText = [[UILabel alloc]initWithFrame:CGRectInset(firstNameCell.contentView.bounds, 15, 0)];
+    firstNameText.text = @"Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia";
+    firstNameText.font = [UIFont systemFontOfSize:16];
+    firstNameText.lineBreakMode = NSLineBreakByWordWrapping;
+    firstNameText.numberOfLines = 0;
+    [firstNameText sizeToFit];
+    [firstNameCell addSubview:firstNameText];
+    [firstNameCell sizeToFit];
+    [testSection addSubview:firstNameCell];
+    [listArray  addObject:section0];
+ */
     NSMutableArray *generalItems = [[NSMutableArray alloc] init];
 
     NSArray *items =
@@ -339,21 +364,38 @@
     section1.colorForBackground = self.rowColor;
     
      [listArray  addObject:section1];
-   
+ 
     for (NSDictionary *section in self.items ){
         
         UIView *viewOfSection = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 0)];
-        int i = 30;
+        int i = 10;
         int height = 0;
         for (NSString *myitems in section[@"content"]){
-            
-            UILabel *cSubsection = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width, i)];
+            UILabel *cSubsection = [[UILabel alloc] init];
+            cSubsection.lineBreakMode = NSLineBreakByWordWrapping;
+            cSubsection.numberOfLines = 0;
+           
             [cSubsection setText:myitems];
             [cSubsection setFont:[UIFont boldSystemFontOfSize:12]];
             [cSubsection setTextColor:[UIColor grayColor]];
+            //[cSubsection.layer setBorderWidth: 1.0];
             [viewOfSection addSubview:cSubsection];
-            i=i+30;
-            height=height+30;
+            NSStringDrawingContext *context = [[NSStringDrawingContext alloc] init];
+            CGSize labelSize = (CGSize){self.view.frame.size.width, 999};
+            CGRect r = [cSubsection.text boundingRectWithSize:labelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]} context:context];
+            if (r.size.height >= 20.00){
+                cSubsection.frame = CGRectMake(5, i, self.view.frame.size.width-10, r.size.height-15);
+                i=i+r.size.height-15;
+            }
+            else{
+                cSubsection.frame = CGRectMake(5, i, self.view.frame.size.width-10, r.size.height);
+                i=i+r.size.height;
+                
+            }
+            NSLog(@"%f",r.size.height);
+            
+            // NSLog(@"%i",i);
+            height=height+r.size.height;
             
             
             

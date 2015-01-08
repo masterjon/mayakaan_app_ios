@@ -12,4 +12,5 @@
 @property (nonatomic,strong)  UIColor *rowColor;
 @property (strong, nonatomic) IBOutlet UITableView *myTable;
 @property (nonatomic,strong) NSMutableArray *items;
+
 @end

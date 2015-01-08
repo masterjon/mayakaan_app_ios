@@ -349,6 +349,9 @@
             [cSubsection setText:myitems[@"subsection"]];
             [cSubsection setFont:[UIFont boldSystemFontOfSize:12]];
             [cSubsection setTextColor:[UIColor grayColor]];
+            [cSubsection.layer setBorderColor: [[UIColor redColor] CGColor]];
+            [cSubsection.layer setBorderWidth: 1.0];
+
             [viewOfSection addSubview:cSubsection];
             i=i+30;
             height=height+10;
@@ -358,6 +361,9 @@
                 [cTitle setText:contacts[@"title"]];
                 [cTitle setFont:[UIFont boldSystemFontOfSize:11]];
                 [cTitle setTextColor:[UIColor grayColor]];
+                [cTitle.layer setBorderColor: [[UIColor blueColor] CGColor]];
+                [cTitle.layer setBorderWidth: 1.0];
+
                 [viewOfSection addSubview:cTitle];
                 i=i+30;
                 height=height+30;
@@ -367,6 +373,9 @@
                     [cPhone setText:phone];
                     [cPhone setFont:[UIFont fontWithName:@"Helvetica" size:11]];
                     [cPhone setTextColor:[UIColor grayColor]];
+                    [cPhone.layer setBorderColor: [[UIColor greenColor] CGColor]];
+                    [cPhone.layer setBorderWidth: 1.0];
+
                     [viewOfSection addSubview:cPhone];
                     i=i+30;
                     height=height+30;
