@@ -375,7 +375,10 @@
                     [cPhone setTextColor:[UIColor grayColor]];
                     [cPhone.layer setBorderColor: [[UIColor greenColor] CGColor]];
                     [cPhone.layer setBorderWidth: 1.0];
-
+                    NSStringDrawingContext *context = [[NSStringDrawingContext alloc] init];
+                    CGSize labelSize = (CGSize){self.view.frame.size.width, 999};
+                    CGRect r = [cSubsection.text boundingRectWithSize:labelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]} context:context];
+                    cPhone.frame =  CGRectMake(ident, i, self.view.frame.size.width-ident, r.size.height);
                     [viewOfSection addSubview:cPhone];
                     i=i+30;
                     height=height+30;
