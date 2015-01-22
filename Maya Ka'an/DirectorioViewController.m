@@ -317,8 +317,8 @@
 
 - (void)setupAppearence {
     [self setHeaderHeight:50];
-    [self setHeaderArrowImageClosed:[UIImage imageNamed:@"carat-open"]];
-    [self setHeaderArrowImageOpened:[UIImage imageNamed:@"carat"]];
+    //[self setHeaderArrowImageClosed:[UIImage imageNamed:@"ctrl-down"]];
+    //[self setHeaderArrowImageOpened:[UIImage imageNamed:@"ctrl-up"]];
     [self setHeaderFont:[UIFont  boldSystemFontOfSize:16]];
     [self setHeaderTitleColor:[UIColor whiteColor]];
     [self setHeaderSeparatorColor:[UIColor whiteColor]];
@@ -337,106 +337,157 @@
 - (NSArray *)getSectionArray {
 
     NSMutableArray *listArray = [[NSMutableArray alloc] init];
-    int ident = 20;
+    int ident = 10;
     for (NSDictionary *section in self.items ){
         
         UIView *viewOfSection = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width-40, 0)];
-        int i = 50;
-        int height = 0;
+        int i = 0;
+        int textHeight = 5;
         for (NSDictionary *myitems in section[@"content"]){
 
-            UILabel *cSubsection = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width-40, i)];
+            UILabel *cSubsection = [[UILabel alloc] init];
             [cSubsection setText:myitems[@"subsection"]];
-            [cSubsection setFont:[UIFont boldSystemFontOfSize:12]];
+            cSubsection.lineBreakMode = NSLineBreakByWordWrapping;
+            cSubsection.numberOfLines = 0;
+
+            [cSubsection setFont:[UIFont boldSystemFontOfSize:15]];
             [cSubsection setTextColor:[UIColor grayColor]];
-            [cSubsection.layer setBorderColor: [[UIColor redColor] CGColor]];
-            [cSubsection.layer setBorderWidth: 1.0];
-
+            //[cSubsection.layer setBorderColor: [[UIColor redColor] CGColor]];
+            //[cSubsection.layer setBorderWidth: 1.0];
+            ident = 10;
             [viewOfSection addSubview:cSubsection];
-            i=i+30;
-            height=height+10;
-
+            NSStringDrawingContext *context = [[NSStringDrawingContext alloc] init];
+            CGSize labelSize = (CGSize){self.view.frame.size.width, 999};
+            CGRect r = [cSubsection.text boundingRectWithSize:labelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]} context:context];
+            cSubsection.frame = CGRectMake(ident, i, self.view.frame.size.width-10, r.size.height+textHeight);
+            i=i+r.size.height+textHeight;
+            ident = 15;
             for (NSDictionary *contacts in myitems[@"contacts"]){
-                UILabel *cTitle = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width-40, i)];
+                UILabel *cTitle = [[UILabel alloc] init];
                 [cTitle setText:contacts[@"title"]];
-                [cTitle setFont:[UIFont boldSystemFontOfSize:11]];
+                [cTitle setFont:[UIFont boldSystemFontOfSize:14]];
                 [cTitle setTextColor:[UIColor grayColor]];
-                [cTitle.layer setBorderColor: [[UIColor blueColor] CGColor]];
-                [cTitle.layer setBorderWidth: 1.0];
-
+                //[cTitle.layer setBorderColor: [[UIColor blueColor] CGColor]];
+                //[cTitle.layer setBorderWidth: 1.0];
                 [viewOfSection addSubview:cTitle];
-                i=i+30;
-                height=height+30;
+                
+                NSStringDrawingContext *context = [[NSStringDrawingContext alloc] init];
+                CGSize labelSize = (CGSize){self.view.frame.size.width, 999};
+                CGRect r = [cTitle.text boundingRectWithSize:labelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]} context:context];
+                cTitle.frame = CGRectMake(ident, i, self.view.frame.size.width-10, r.size.height);
+                i=i+r.size.height;
+               
+                
                 for (NSString *phone in contacts[@"phones"]){
                     
-                    UILabel *cPhone = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width-40, i)];
+                    UITextView *cPhone = [[UITextView alloc] init];
+                    cPhone.dataDetectorTypes = UIDataDetectorTypeAll;
+                    cPhone.editable = NO;
+                    cPhone.scrollEnabled = NO;
                     [cPhone setText:phone];
-                    [cPhone setFont:[UIFont fontWithName:@"Helvetica" size:11]];
+                    [cPhone setFont:[UIFont fontWithName:@"Helvetica" size:14]];
                     [cPhone setTextColor:[UIColor grayColor]];
-                    [cPhone.layer setBorderColor: [[UIColor greenColor] CGColor]];
-                    [cPhone.layer setBorderWidth: 1.0];
+                    //[cPhone.layer setBorderColor: [[UIColor greenColor] CGColor]];
+                    //[cPhone.layer setBorderWidth: 1.0];
                     NSStringDrawingContext *context = [[NSStringDrawingContext alloc] init];
                     CGSize labelSize = (CGSize){self.view.frame.size.width, 999};
-                    CGRect r = [cSubsection.text boundingRectWithSize:labelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]} context:context];
-                    cPhone.frame =  CGRectMake(ident, i, self.view.frame.size.width-ident, r.size.height);
+                    CGRect r = [cPhone.text boundingRectWithSize:labelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]} context:context];
+                    cPhone.frame =  CGRectMake(ident, i, self.view.frame.size.width-ident, r.size.height+textHeight);
                     [viewOfSection addSubview:cPhone];
-                    i=i+30;
-                    height=height+30;
+                    i=i+r.size.height+textHeight;
                 }
+                
                 for (NSString *email in contacts[@"emails"]){
                     
-                    UILabel *cEmail = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width-40, i)];
+                    UITextView *cEmail = [[UITextView alloc] init];
+                    cEmail.dataDetectorTypes = UIDataDetectorTypeAll;
+                    cEmail.editable = NO;
+                    cEmail.scrollEnabled = NO;
                     [cEmail setText:email];
-                    [cEmail setFont:[UIFont fontWithName:@"Helvetica" size:11]];
+                    [cEmail setFont:[UIFont fontWithName:@"Helvetica" size:14]];
                     [cEmail setTextColor:[UIColor grayColor]];
+                    //[cEmail.layer setBorderColor: [[UIColor yellowColor] CGColor]];
+                    //[cEmail.layer setBorderWidth: 1.0];
+                    NSStringDrawingContext *context = [[NSStringDrawingContext alloc] init];
+                    CGSize labelSize = (CGSize){self.view.frame.size.width, 999};
+                    CGRect r = [cEmail.text boundingRectWithSize:labelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]} context:context];
+                    cEmail.frame =  CGRectMake(ident, i, self.view.frame.size.width-ident, r.size.height+textHeight);
                     [viewOfSection addSubview:cEmail];
-                    i=i+30;
-                    height=height+30;
+                    i=i+r.size.height+textHeight;
                 
                 }
-                i=i+20;
+                i=i+8;
                 
 
             }
             
 
             for (NSString *email in myitems[@"emails"]){
-                UILabel *Email = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width-40, i)];
+                UITextView *Email = [[UITextView alloc] init];
+                Email.dataDetectorTypes = UIDataDetectorTypeAll;
+                Email.editable = NO;
+                Email.scrollEnabled = NO;
                 [Email setText:email];
-                [Email setFont:[UIFont fontWithName:@"Helvetica" size:11]];
+                [Email setFont:[UIFont fontWithName:@"Helvetica" size:14]];
                 [Email setTextColor:[UIColor grayColor]];
+                //[Email.layer setBorderColor: [[UIColor purpleColor] CGColor]];
+                //[Email.layer setBorderWidth: 1.0];
+                NSStringDrawingContext *context = [[NSStringDrawingContext alloc] init];
+                CGSize labelSize = (CGSize){self.view.frame.size.width, 999};
+                CGRect r = [Email.text boundingRectWithSize:labelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]} context:context];
+                Email.frame =  CGRectMake(ident, i, self.view.frame.size.width-ident, r.size.height+textHeight);
                 [viewOfSection addSubview:Email];
-                i=i+30;
-                height=height+30;
-
+                i=i+r.size.height+textHeight;
             }
+           
             if ([myitems[@"web"] length] != 0) {
-                UILabel *cWeb = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width-40, i)];
+                UITextView *cWeb = [[UITextView alloc] init];
+                cWeb.dataDetectorTypes = UIDataDetectorTypeAll;
+                cWeb.editable = NO;
+                cWeb.scrollEnabled = NO;
                 [cWeb setText:myitems[@"web"]];
-                [cWeb setFont:[UIFont fontWithName:@"Helvetica" size:11]];
+                [cWeb setFont:[UIFont fontWithName:@"Helvetica" size:14]];
                 [cWeb setTextColor:[UIColor grayColor]];
+                //[cWeb.layer setBorderColor: [[UIColor orangeColor] CGColor]];
+                //[cWeb.layer setBorderWidth: 1.0];
+                NSStringDrawingContext *context = [[NSStringDrawingContext alloc] init];
+                CGSize labelSize = (CGSize){self.view.frame.size.width, 999};
+                CGRect r = [cWeb.text boundingRectWithSize:labelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]} context:context];
+                cWeb.frame =  CGRectMake(ident, i, self.view.frame.size.width-ident, r.size.height+textHeight);
                 [viewOfSection addSubview:cWeb];
-                i=i+30;
-                height=height+30;
-            }
-            if ([myitems[@"facebook"] length] != 0) {
-                UILabel *cFacebook = [[UILabel alloc] initWithFrame:CGRectMake(ident, 0, self.view.frame.size.width-40, i)];
-                [cFacebook setText:myitems[@"facebook"]];
-                [cFacebook setFont:[UIFont fontWithName:@"Helvetica" size:11]];
-                [cFacebook setTextColor:[UIColor grayColor]];
-                [viewOfSection addSubview:cFacebook];
+                i=i+r.size.height+textHeight;
+                
             }
             
-            i=i+60;
+            if ([myitems[@"facebook"] length] != 0) {
+                UITextView *cFacebook = [[UITextView alloc] init];
+                cFacebook.dataDetectorTypes = UIDataDetectorTypeAll;
+                cFacebook.editable = NO;
+                cFacebook.scrollEnabled = NO;
+                [cFacebook setText:myitems[@"facebook"]];
+                [cFacebook setFont:[UIFont fontWithName:@"Helvetica" size:14]];
+                [cFacebook setTextColor:[UIColor grayColor]];
+                //[cFacebook.layer setBorderColor: [[UIColor grayColor] CGColor]];
+                //[cFacebook.layer setBorderWidth: 1.0];
+                NSStringDrawingContext *context = [[NSStringDrawingContext alloc] init];
+                CGSize labelSize = (CGSize){self.view.frame.size.width, 999};
+                CGRect r = [cFacebook.text boundingRectWithSize:labelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]} context:context];
+                cFacebook.frame =  CGRectMake(ident, i, self.view.frame.size.width-ident, r.size.height+textHeight);
+                [viewOfSection addSubview:cFacebook];
+                i=i+r.size.height+textHeight;
+                
+
+            }
+
+            i=i+15;
 
         }
         NSLog(@"%i -- %@",i,section[@"section"]);
-        viewOfSection.frame = CGRectMake(0, 0, self.view.frame.size.width-40, height);
+        viewOfSection.frame = CGRectMake(0, 0, self.view.frame.size.width-40, i );
         KMSection *section3 = [[KMSection alloc] init];
         section3.view = viewOfSection;
         section3.title = [section[@"section"] capitalizedString];
         section3.colorForBackground = self.rowColor;
-        section3.image = [UIImage imageNamed:@"Skype_Email"];
         [listArray  addObject:section3];
 
     }

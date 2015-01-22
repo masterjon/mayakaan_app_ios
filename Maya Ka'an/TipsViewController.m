@@ -195,8 +195,8 @@
 
 - (void)setupAppearence {
     [self setHeaderHeight:50];
-    [self setHeaderArrowImageClosed:[UIImage imageNamed:@"carat-open"]];
-    [self setHeaderArrowImageOpened:[UIImage imageNamed:@"carat"]];
+   // [self setHeaderArrowImageClosed:[UIImage imageNamed:@"carat-open"]];
+   // [self setHeaderArrowImageOpened:[UIImage imageNamed:@"carat"]];
     [self setHeaderFont:[UIFont  boldSystemFontOfSize:16]];
     [self setHeaderTitleColor:[UIColor whiteColor]];
     [self setHeaderSeparatorColor:[UIColor whiteColor]];
@@ -338,7 +338,8 @@
         
         UILabel *tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(iconMarginLeft, labelMarginTop, labelWidth, labelHeight)];
         tipLabel.text = myItems[@"title"];
-        tipLabel.font = [UIFont systemFontOfSize:10];
+        tipLabel.font = [UIFont systemFontOfSize:12];
+        tipLabel.textColor = [UIColor grayColor];
         tipLabel.lineBreakMode = NSLineBreakByWordWrapping;
         tipLabel.numberOfLines = 0;
         tipLabel.textAlignment = NSTextAlignmentCenter;
@@ -376,7 +377,7 @@
             cSubsection.numberOfLines = 0;
            
             [cSubsection setText:myitems];
-            [cSubsection setFont:[UIFont boldSystemFontOfSize:12]];
+            [cSubsection setFont:[UIFont systemFontOfSize:14]];
             [cSubsection setTextColor:[UIColor grayColor]];
             //[cSubsection.layer setBorderWidth: 1.0];
             [viewOfSection addSubview:cSubsection];
@@ -384,18 +385,19 @@
             CGSize labelSize = (CGSize){self.view.frame.size.width, 999};
             CGRect r = [cSubsection.text boundingRectWithSize:labelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]} context:context];
             if (r.size.height >= 20.00){
-                cSubsection.frame = CGRectMake(5, i, self.view.frame.size.width-10, r.size.height-15);
-                i=i+r.size.height-15;
+                cSubsection.frame = CGRectMake(10, i, self.view.frame.size.width-10, r.size.height);
+                i=i+r.size.height;
+                 height=height+r.size.height+15;
             }
             else{
-                cSubsection.frame = CGRectMake(5, i, self.view.frame.size.width-10, r.size.height);
+                cSubsection.frame = CGRectMake(10, i, self.view.frame.size.width-10, r.size.height);
                 i=i+r.size.height;
+                 height=height+r.size.height;
                 
             }
             NSLog(@"%f",r.size.height);
             
             // NSLog(@"%i",i);
-            height=height+r.size.height;
             
             
             

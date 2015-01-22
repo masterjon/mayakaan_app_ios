@@ -8,8 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		BCA6C4051A5B5005003B495E /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA6C4041A5B5005003B495E /* TipsViewController.m */; };
+		FB1045B51A65A830000918A7 /* InteractiveMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1045B41A65A830000918A7 /* InteractiveMapViewController.m */; };
+		FB1045B71A65F230000918A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1045B61A65F230000918A7 /* Foundation.framework */; };
 		FB79C8561A51CDBA00755704 /* DestinosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB79C8551A51CDBA00755704 /* DestinosViewController.m */; };
 		FB79C8591A521D8100755704 /* DirectorioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB79C8581A521D8100755704 /* DirectorioViewController.m */; };
+		FBE18E111A66EDDF002970F8 /* DestinoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE18E101A66EDDF002970F8 /* DestinoViewController.m */; };
+		FBF353561A683E3200701034 /* EscapadasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF353551A683E3200701034 /* EscapadasViewController.m */; };
+		FBF353591A68489500701034 /* EscapadaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF353581A68489500701034 /* EscapadaViewController.m */; };
+		FBF3535C1A68739700701034 /* GaleriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF3535B1A68739700701034 /* GaleriaViewController.m */; };
+		FBF3535F1A6878CF00701034 /* GaleriaDetalleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF3535E1A6878CF00701034 /* GaleriaDetalleViewController.m */; };
 		FBFB3D461A49F31E008DE9B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB3D451A49F31E008DE9B6 /* main.m */; };
 		FBFB3D491A49F31E008DE9B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB3D481A49F31E008DE9B6 /* AppDelegate.m */; };
 		FBFB3D4C1A49F31E008DE9B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB3D4B1A49F31E008DE9B6 /* ViewController.m */; };
@@ -23,6 +30,8 @@
 		FBFE07A51A530A7D00CF3AC0 /* KMSection.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFE079C1A530A7D00CF3AC0 /* KMSection.m */; };
 		FBFE07A61A530A7D00CF3AC0 /* KMAccordionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFE079F1A530A7D00CF3AC0 /* KMAccordionTableViewController.m */; };
 		FBFE07A71A530A7D00CF3AC0 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFE07A11A530A7D00CF3AC0 /* MyViewController.m */; };
+		FBFE0FBC1A606418006CE6B1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFE0FBB1A606418006CE6B1 /* MapViewController.m */; };
+		FBFE0FBE1A609626006CE6B1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFE0FBD1A609626006CE6B1 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +47,23 @@
 /* Begin PBXFileReference section */
 		BCA6C4031A5B5005003B495E /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
 		BCA6C4041A5B5005003B495E /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
+		FB1045B31A65A830000918A7 /* InteractiveMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveMapViewController.h; sourceTree = "<group>"; };
+		FB1045B41A65A830000918A7 /* InteractiveMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveMapViewController.m; sourceTree = "<group>"; };
+		FB1045B61A65F230000918A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB79C8541A51CDBA00755704 /* DestinosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinosViewController.h; sourceTree = "<group>"; };
 		FB79C8551A51CDBA00755704 /* DestinosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinosViewController.m; sourceTree = "<group>"; };
 		FB79C8571A521D8100755704 /* DirectorioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorioViewController.h; sourceTree = "<group>"; };
 		FB79C8581A521D8100755704 /* DirectorioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectorioViewController.m; sourceTree = "<group>"; };
+		FBE18E0F1A66EDDF002970F8 /* DestinoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinoViewController.h; sourceTree = "<group>"; };
+		FBE18E101A66EDDF002970F8 /* DestinoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinoViewController.m; sourceTree = "<group>"; };
+		FBF353541A683E3200701034 /* EscapadasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EscapadasViewController.h; sourceTree = "<group>"; };
+		FBF353551A683E3200701034 /* EscapadasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EscapadasViewController.m; sourceTree = "<group>"; };
+		FBF353571A68489500701034 /* EscapadaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EscapadaViewController.h; sourceTree = "<group>"; };
+		FBF353581A68489500701034 /* EscapadaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EscapadaViewController.m; sourceTree = "<group>"; };
+		FBF3535A1A68739700701034 /* GaleriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaleriaViewController.h; sourceTree = "<group>"; };
+		FBF3535B1A68739700701034 /* GaleriaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaleriaViewController.m; sourceTree = "<group>"; };
+		FBF3535D1A6878CF00701034 /* GaleriaDetalleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaleriaDetalleViewController.h; sourceTree = "<group>"; };
+		FBF3535E1A6878CF00701034 /* GaleriaDetalleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaleriaDetalleViewController.m; sourceTree = "<group>"; };
 		FBFB3D401A49F31E008DE9B6 /* Maya Ka'an.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Maya Ka'an.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBFB3D441A49F31E008DE9B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBFB3D451A49F31E008DE9B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,6 +88,9 @@
 		FBFE079F1A530A7D00CF3AC0 /* KMAccordionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMAccordionTableViewController.m; sourceTree = "<group>"; };
 		FBFE07A01A530A7D00CF3AC0 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		FBFE07A11A530A7D00CF3AC0 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		FBFE0FBA1A606418006CE6B1 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		FBFE0FBB1A606418006CE6B1 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		FBFE0FBD1A609626006CE6B1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB1045B71A65F230000918A7 /* Foundation.framework in Frameworks */,
+				FBFE0FBE1A609626006CE6B1 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +116,8 @@
 		FBFB3D371A49F31E008DE9B6 = {
 			isa = PBXGroup;
 			children = (
+				FB1045B61A65F230000918A7 /* Foundation.framework */,
+				FBFE0FBD1A609626006CE6B1 /* MapKit.framework */,
 				FBFB3D421A49F31E008DE9B6 /* Maya Ka'an */,
 				FBFB3D5C1A49F31F008DE9B6 /* Maya Ka'anTests */,
 				FBFB3D411A49F31E008DE9B6 /* Products */,
@@ -124,6 +153,20 @@
 				FB79C8581A521D8100755704 /* DirectorioViewController.m */,
 				BCA6C4031A5B5005003B495E /* TipsViewController.h */,
 				BCA6C4041A5B5005003B495E /* TipsViewController.m */,
+				FBFE0FBA1A606418006CE6B1 /* MapViewController.h */,
+				FBFE0FBB1A606418006CE6B1 /* MapViewController.m */,
+				FB1045B31A65A830000918A7 /* InteractiveMapViewController.h */,
+				FB1045B41A65A830000918A7 /* InteractiveMapViewController.m */,
+				FBE18E0F1A66EDDF002970F8 /* DestinoViewController.h */,
+				FBE18E101A66EDDF002970F8 /* DestinoViewController.m */,
+				FBF353541A683E3200701034 /* EscapadasViewController.h */,
+				FBF353551A683E3200701034 /* EscapadasViewController.m */,
+				FBF353571A68489500701034 /* EscapadaViewController.h */,
+				FBF353581A68489500701034 /* EscapadaViewController.m */,
+				FBF3535A1A68739700701034 /* GaleriaViewController.h */,
+				FBF3535B1A68739700701034 /* GaleriaViewController.m */,
+				FBF3535D1A6878CF00701034 /* GaleriaDetalleViewController.h */,
+				FBF3535E1A6878CF00701034 /* GaleriaDetalleViewController.m */,
 			);
 			path = "Maya Ka'an";
 			sourceTree = "<group>";
@@ -235,6 +278,11 @@
 				TargetAttributes = {
 					FBFB3D3F1A49F31E008DE9B6 = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					FBFB3D581A49F31F008DE9B6 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -287,14 +335,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBF3535C1A68739700701034 /* GaleriaViewController.m in Sources */,
 				FBFB3D4C1A49F31E008DE9B6 /* ViewController.m in Sources */,
+				FBE18E111A66EDDF002970F8 /* DestinoViewController.m in Sources */,
 				FBFE07A21A530A7D00CF3AC0 /* KMSectionHeaderView.m in Sources */,
 				FBFB3D491A49F31E008DE9B6 /* AppDelegate.m in Sources */,
+				FBF353591A68489500701034 /* EscapadaViewController.m in Sources */,
+				FBFE0FBC1A606418006CE6B1 /* MapViewController.m in Sources */,
+				FB1045B51A65A830000918A7 /* InteractiveMapViewController.m in Sources */,
 				FBFE07A51A530A7D00CF3AC0 /* KMSection.m in Sources */,
 				FBFE07A71A530A7D00CF3AC0 /* MyViewController.m in Sources */,
 				BCA6C4051A5B5005003B495E /* TipsViewController.m in Sources */,
 				FBFE07A41A530A7D00CF3AC0 /* KMAppearence.m in Sources */,
+				FBF353561A683E3200701034 /* EscapadasViewController.m in Sources */,
 				FBFB3D461A49F31E008DE9B6 /* main.m in Sources */,
+				FBF3535F1A6878CF00701034 /* GaleriaDetalleViewController.m in Sources */,
 				FB79C8561A51CDBA00755704 /* DestinosViewController.m in Sources */,
 				FB79C8591A521D8100755704 /* DirectorioViewController.m in Sources */,
 				FBFE07A61A530A7D00CF3AC0 /* KMAccordionTableViewController.m in Sources */,
@@ -420,7 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Maya Ka'an/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -431,7 +486,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Maya Ka'an/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

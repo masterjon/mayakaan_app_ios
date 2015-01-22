@@ -16,6 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"Maya Ka'an";
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setBackgroundColor:[UIColor brownColor]];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navBar"]forBarMetrics:UIBarMetricsDefault];
     self.menuItems = [[NSMutableArray alloc] init];
     NSArray *menu = @[
                       @{
@@ -26,12 +31,12 @@
                       @{
                           @"title":@"Escapadas",
                           @"image":@"icono-escapadas",
-                          @"target":@""
+                          @"target":@"EscapadasViewController"
                         },
                       @{
                           @"title":@"Galería",
                           @"image":@"icono-galeria",
-                          @"target":@""
+                          @"target":@"GaleriaViewController"
                         },
                       @{
                           @"title":@"Directorio",
@@ -46,7 +51,7 @@
                       @{
                           @"title":@"Mapa",
                           @"image":@"icono-mapa",
-                          @"target":@""
+                          @"target":@"MapViewController"
                         },
                      
                       ];

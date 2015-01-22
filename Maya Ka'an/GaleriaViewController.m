@@ -1,25 +1,27 @@
 //
-//  DestinosViewController.m
+//  GaleriaViewController.m
 //  Maya Ka'an
 //
-//  Created by Alberto Enriquez on 29/12/14.
-//  Copyright (c) 2014 Punk E-Marketing & Consulting. All rights reserved.
+//  Created by Alberto Enriquez on 15/01/15.
+//  Copyright (c) 2015 Punk E-Marketing & Consulting. All rights reserved.
 //
 
-#import "DestinosViewController.h"
-#import "DestinoViewController.h"
+#import "GaleriaViewController.h"
+#import "GaleriaDetalleViewController.h"
 
-@interface DestinosViewController ()
-    @property (strong, nonatomic) NSURLSession *session;
-    @property (strong,nonatomic) NSURLSessionConfiguration *sessionConfiguration;
+@interface GaleriaViewController ()
+@property (strong, nonatomic) NSURLSession *session;
+@property (strong,nonatomic) NSURLSessionConfiguration *sessionConfiguration;
+
 @end
 
-@implementation DestinosViewController
+@implementation GaleriaViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.destinosItems = [[NSMutableArray alloc] init];
-    NSURL *url = [NSURL URLWithString:@"http://mayakaan.travel/mayakaan_api/api/v1/destinos/?format=json"];
+    self.galeriaItems = [[NSMutableArray alloc] init];
+    // NSURL *url = [NSURL URLWithString:@"http://mejorandoios.herokuapp.com/api/courses/all"];
+    NSURL *url = [NSURL URLWithString:@"http://mayakaan.travel/mayakaan_api/api/v1/galeria/?format=json"];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     self.sessionConfiguration=[NSURLSessionConfiguration defaultSessionConfiguration];
@@ -29,7 +31,7 @@
         if(urlResponse.statusCode==200){
             NSLog(@"It Came to 200 status");
             
-            
+            //este metodo llena el arreglo con los datos obtenidos de nuestro request
             [self handleResults:data];
         }
     }];
@@ -37,79 +39,75 @@
     // Do any additional setup after loading the view.
 }
 - (void) handleResults:(NSData *)data{
-    
+    //la respuesta viene serializada en json por lo tanto lo tenemos que deserializar
     NSError *jsonError;
     NSDictionary *response= [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
     if (response){
+        //metemos en la consola de logs la respuesta
+        // NSLog(@"%@",response[@"data"]);
         
-        NSLog(@"%@",response[@"destinos"]);
-
-        
-        for (NSDictionary *dataDictionary in response[@"destinos"]){
-
-            [self.destinosItems addObject:dataDictionary];
-            NSLog(@"%@",dataDictionary[@"nombre"]);
+        //ahora si agregamos los items al arreglo
+        //for (NSDictionary *dataDictionary in response[@"data"]){
+        for (NSDictionary *dataDictionary in response[@"galeria"]){
+            
+            [self.galeriaItems addObject:dataDictionary];
         }
         
-        
+        //lo que consume tiempo lo manejamos en un hilo diferente de manera asincrona
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.DestinosCollection reloadData];
+            [self.galeriaCollection reloadData];
         });
     }
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 -(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return [self.destinosItems  count];
-
+    return [self.galeriaItems  count];
+    
 }
 -(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"destinoCell" forIndexPath:indexPath];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"galeriaCell" forIndexPath:indexPath];
     UIImageView *imageView = (UIImageView *) [cell viewWithTag:10];
-    UILabel *label = (UILabel *) [cell viewWithTag:11];
+   
     
-    if ([self.destinosItems count] > 0){
-        NSDictionary *cellDictionary = [self.destinosItems objectAtIndex:indexPath.row];
-        NSString *destinoLabel = [cellDictionary objectForKey:@"nombre"];
-        NSString *imageUrlString = [cellDictionary objectForKey:@"img_portada"];
+    if ([self.galeriaItems count] > 0){
+        NSDictionary *cellDictionary = [self.galeriaItems objectAtIndex:indexPath.row];
+               NSString *imageUrlString = [cellDictionary objectForKey:@"img_portada"];
         NSURL *imageUrl = [NSURL URLWithString:imageUrlString
                                  relativeToURL:[NSURL URLWithString:@"http://mayakaan.travel/mayakaan_api/media/"]];
         NSURLRequest *imageUrlRequest = [NSURLRequest requestWithURL:imageUrl];
         
-
+        
         NSURLSessionDataTask *task = [self.session dataTaskWithRequest:imageUrlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
             NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
             if(urlResponse.statusCode==200){
                 dispatch_async(dispatch_get_main_queue(), ^{
                     imageView.image=[UIImage imageWithData:data];
-                    label.text = [NSString stringWithFormat:@"%@",destinoLabel];
+                 
                 });
             }
             else{
                 NSLog(@"Error fetching remote data");
             }
-        
-        
+            
+            
         }];
-         [task resume];
-    
+        [task resume];
+        
     }
     return cell;
 }
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    DestinoViewController *View = [[DestinoViewController alloc] init];
+    GaleriaDetalleViewController *View = [[GaleriaDetalleViewController alloc] init];
     View = [segue destinationViewController];
-    NSArray *arrayOfIndexPaths = [self.DestinosCollection indexPathsForSelectedItems];
+    NSArray *arrayOfIndexPaths = [self.galeriaCollection indexPathsForSelectedItems];
     NSIndexPath *path = [arrayOfIndexPaths firstObject];
-    NSDictionary *destinoDictionary = [self.destinosItems objectAtIndex:path.row];
-    View.tituloDestino = destinoDictionary[@"nombre"];
-    View.descriptionDestino = destinoDictionary[@"des_cripcion"];
-    View.imagenDestino = destinoDictionary[@"img_destino"];
-    View.actividadesDestino = destinoDictionary[@"actividades"];
-    View.ubicacionDestino = destinoDictionary[@"ubicacion"];
+    NSDictionary *galeriaDictionary = [self.galeriaItems objectAtIndex:path.row];
+    View.tituloImagen = galeriaDictionary[@"nombre"];
+    View.imagenUrl = galeriaDictionary[@"img_destino"];
+
 }
 /*
 #pragma mark - Navigation
