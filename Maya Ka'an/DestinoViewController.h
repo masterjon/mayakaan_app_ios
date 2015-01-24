@@ -15,9 +15,15 @@
 @property (weak, nonatomic) IBOutlet UITextView *actividadesDestinoTextView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewDestino;
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
+
+@property (weak, nonatomic) IBOutlet UITextView *actividadesDestinoLabel;
+
+
 @property (nonatomic,strong) NSString *tituloDestino;
 @property (nonatomic,strong) NSString *descriptionDestino;
 @property (nonatomic,strong) NSString *ubicacionDestino;
 @property (nonatomic,strong) NSString *actividadesDestino;
 @property (nonatomic,strong) NSString *imagenDestino;
+
+@property (nonatomic,strong) UIImage *imagen;
 @end

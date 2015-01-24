@@ -12,4 +12,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *galleryImageView;
 @property (strong,nonatomic) NSString *tituloImagen;
 @property (strong,nonatomic) NSString *imagenUrl;
+@property (strong,nonatomic) UIImage *image;
 @end

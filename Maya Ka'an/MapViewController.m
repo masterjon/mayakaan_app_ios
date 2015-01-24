@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"fondo"]];
+    self.navigationItem.rightBarButtonItem =  [[UIBarButtonItem alloc]
+                                               initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                                               target:self
+                                               action:@selector(shareAction:)];
 
     // Do any additional setup after loading the view.
 }
@@ -29,7 +33,15 @@
 {
     return self.imageView;
 }
-
+-(IBAction)shareAction:(UIButton *)sender {
+    
+    NSString *shareText= NSLocalizedString(@"Descubre lugares increíbles en Maya Ka'an",nil);
+    UIImage *mergedImage = [UIImage imageNamed:@"mapa-mayakaan"];
+    NSArray *items2Share= @[shareText,mergedImage];
+    UIActivityViewController *activityViewC = [[UIActivityViewController alloc] initWithActivityItems:items2Share applicationActivities:nil];
+    activityViewC.excludedActivityTypes = @[];
+    [self presentViewController:activityViewC animated:YES completion:nil];
+}
 /*
 #pragma mark - Navigation
 

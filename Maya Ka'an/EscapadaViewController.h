@@ -15,9 +15,13 @@
 @property (weak, nonatomic) IBOutlet UITextView *ubicacionEscapadasTextView;
 @property (weak, nonatomic) IBOutlet UITextView *actividadesEscapadaTextView;
 
+@property (weak, nonatomic) IBOutlet UILabel *actividadesEscapadaLabel;
+
 @property (nonatomic,strong) NSString *tituloEscapada;
 @property (nonatomic,strong) NSString *descriptionEscapada;
 @property (nonatomic,strong) NSString *ubicacionEscapada;
 @property (nonatomic,strong) NSString *actividadesEscapada;
 @property (nonatomic,strong) NSString *imagenEscapada;
+
+@property (nonatomic,strong) UIImage *imagen;
 @end

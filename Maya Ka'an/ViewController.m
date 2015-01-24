@@ -24,32 +24,32 @@
     self.menuItems = [[NSMutableArray alloc] init];
     NSArray *menu = @[
                       @{
-                          @"title":@"Destinos",
+                          @"title":NSLocalizedString(@"Destinos",nil),
                           @"image":@"icono-destinos",
                           @"target":@"DestinosViewController"
                         },
                       @{
-                          @"title":@"Escapadas",
+                          @"title":NSLocalizedString(@"Escapadas",nil),
                           @"image":@"icono-escapadas",
                           @"target":@"EscapadasViewController"
                         },
                       @{
-                          @"title":@"Galería",
+                          @"title":NSLocalizedString(@"Galería",nil),
                           @"image":@"icono-galeria",
                           @"target":@"GaleriaViewController"
                         },
                       @{
-                          @"title":@"Directorio",
+                          @"title":NSLocalizedString(@"Directorio",nil),
                           @"image":@"icono-directorio",
                           @"target":@"DirectorioViewController"
                         },
                       @{
-                          @"title":@"Tips",
+                          @"title":NSLocalizedString(@"Tips",nil),
                           @"image":@"icono-tips",
                           @"target":@"TipsViewController"
                         },
                       @{
-                          @"title":@"Mapa",
+                          @"title":NSLocalizedString(@"Mapa",nil),
                           @"image":@"icono-mapa",
                           @"target":@"MapViewController"
                         },

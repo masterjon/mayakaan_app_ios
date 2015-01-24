@@ -8,7 +8,7 @@
 
 #import "DestinosViewController.h"
 #import "DestinoViewController.h"
-
+#import "MBProgressHUD.h"
 @interface DestinosViewController ()
     @property (strong, nonatomic) NSURLSession *session;
     @property (strong,nonatomic) NSURLSessionConfiguration *sessionConfiguration;
@@ -19,8 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.destinosItems = [[NSMutableArray alloc] init];
-    NSURL *url = [NSURL URLWithString:@"http://mayakaan.travel/mayakaan_api/api/v1/destinos/?format=json"];
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                      message:NSLocalizedString(@"Necesitas activar tu conexión a internet.",nil)
+                                                     delegate:self
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
     
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSURL *url = [NSURL URLWithString:@"http://mayakaan.travel/mayakaan_api/api/v1/destinos/?format=json"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     self.sessionConfiguration=[NSURLSessionConfiguration defaultSessionConfiguration];
     self.session=[NSURLSession sessionWithConfiguration:self.sessionConfiguration];
@@ -31,6 +37,11 @@
             
             
             [self handleResults:data];
+        }
+        else{
+
+            [message show];
+
         }
     }];
     [task resume];
@@ -53,11 +64,15 @@
         
         
         dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             [self.DestinosCollection reloadData];
         });
     }
 }
-
+- (void)alertView:(UIAlertView *)alertView
+clickedButtonAtIndex:(NSInteger)buttonIndex{
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -89,7 +104,7 @@
                 });
             }
             else{
-                NSLog(@"Error fetching remote data");
+                //NSLog(@"Error fetching remote data");
             }
         
         
@@ -98,6 +113,34 @@
     
     }
     return cell;
+}
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    int top = 0;
+    int left = 0;
+    int bottom = 0;
+    int right = 0;
+    
+    switch ((int) screenBounds.size.width) {
+        case 320:
+            NSLog(@"--5--");
+            left = 5;
+            right = 5;
+            break;
+        case 375:
+            NSLog(@"--6--");
+            left = 20;
+            right = 20;
+            break;
+        case 414:
+            NSLog(@"--6+--");
+            left = 30;
+            right = 30;
+            break;
+        default:
+            break;
+    }
+    return UIEdgeInsetsMake(top, left, bottom, right);
 }
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     DestinoViewController *View = [[DestinoViewController alloc] init];

@@ -24,7 +24,10 @@
     self.navigationItem.titleView=viewTitle;
     [viewTitle sizeToFit];
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"fondo"]];
-    
+    self.navigationItem.rightBarButtonItem =  [[UIBarButtonItem alloc]
+                                               initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                                               target:self
+                                               action:@selector(shareAction:)];
     
     NSString *imageUrlString = self.imagenUrl;
     NSURL *imageUrl = [NSURL URLWithString:imageUrlString
@@ -37,29 +40,16 @@
         NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
         if(urlResponse.statusCode==200){
             dispatch_async(dispatch_get_main_queue(), ^{
-               UIImage *image = [UIImage imageWithData:data];
+               self.image = [UIImage imageWithData:data];
                 //NSLog(@"image width: %f",image.size.width);
                 //NSLog(@"image height: %f",image.size.height);
                
-               [_galleryImageView setImage:[UIImage imageWithData:data]];
-                if (image.size.width>image.size.height){
-                    //585X439 314x235
-                    //585X824 314x442
-                    //_galleryImageView.frame = CGRectMake(0, -100, 314, 235);
-                    
-                   // NSLog(@"hirizontal");
-                }
-                else{
-                 //   NSLog(@"vertical");
-                   // _galleryImageView.frame = CGRectMake(0, -100, 314, 442);
-                  
-                }
+               [_galleryImageView setImage:self.image];
                 
                 
             });
         }
         else{
-            NSLog(@"Error fetching remote data");
         }
         
         
@@ -72,8 +62,27 @@
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
+
     
     // Do your resizing
+}
+-(IBAction)shareAction:(UIButton *)sender {
+    
+    NSString *shareText= NSLocalizedString([ self.tituloImagen stringByAppendingString:@" - Maya Ka'an"],nil);
+    UIImage *mergedImage = [self image];
+    CGImageRef cgref = [mergedImage CGImage];
+    CIImage *cim = [mergedImage CIImage];
+    
+    if (cim == nil && cgref == NULL)
+    {
+        NSLog(@"no underlying data");
+    }
+    else{
+        NSArray *items2Share= @[shareText,mergedImage];
+        UIActivityViewController *activityViewC = [[UIActivityViewController alloc] initWithActivityItems:items2Share applicationActivities:nil];
+        activityViewC.excludedActivityTypes = @[];
+        [self presentViewController:activityViewC animated:YES completion:nil];
+    }
 }
 /*
 #pragma mark - Navigation

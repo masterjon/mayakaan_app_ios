@@ -22,6 +22,10 @@
     viewTitle.text=self.tituloDestino;
     self.navigationItem.titleView=viewTitle;
     [viewTitle sizeToFit];
+    self.navigationItem.rightBarButtonItem =  [[UIBarButtonItem alloc]
+                                               initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                                               target:self
+                                               action:@selector(shareAction:)];
     
     [_tituloDestinoLabel setText:self.tituloDestino];
     [_descripcionDestino setText:self.descriptionDestino];
@@ -29,7 +33,9 @@
     [_ubicacionDestinoTextView setText:self.ubicacionDestino];
     //self.bottomView.layer.borderWidth=2;
     //self.bottomView.layer.borderColor = [UIColor redColor].CGColor;
-    
+    if ([self.actividadesDestino  isEqual: @""]) {
+        [_actividadesDestinoLabel setHidden:TRUE];
+    }
     NSString *imageUrlString = self.imagenDestino;
     NSURL *imageUrl = [NSURL URLWithString:imageUrlString
                              relativeToURL:[NSURL URLWithString:@"http://mayakaan.travel/mayakaan_api/media/"]];
@@ -41,13 +47,14 @@
         NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
         if(urlResponse.statusCode==200){
             dispatch_async(dispatch_get_main_queue(), ^{
-                [_imageViewDestino setImage:[UIImage imageWithData:data]];
+                self.imagen = [UIImage imageWithData:data];
+                [_imageViewDestino setImage:self.imagen];
                 //imageView.image=[UIImage imageWithData:data];
               //  label.text = [NSString stringWithFormat:@"%@",destinoLabel];
             });
         }
         else{
-            NSLog(@"Error fetching remote data");
+            //NSLog(@"Error fetching remote data");
         }
         
         
@@ -60,6 +67,24 @@
     [super didReceiveMemoryWarning];
     
     // Dispose of any resources that can be recreated.
+}
+-(IBAction)shareAction:(UIButton *)sender {
+    
+    NSString *shareText= [@"Visita " stringByAppendingString:[ self.tituloDestino stringByAppendingString:@" - Maya Ka'an"] ];
+    UIImage *mergedImage = [self imagen];
+    CGImageRef cgref = [mergedImage CGImage];
+    CIImage *cim = [mergedImage CIImage];
+    
+    if (cim == nil && cgref == NULL)
+    {
+        //NSLog(@"no underlying data");
+    }
+    else{
+        NSArray *items2Share= @[shareText,mergedImage];
+        UIActivityViewController *activityViewC = [[UIActivityViewController alloc] initWithActivityItems:items2Share applicationActivities:nil];
+        activityViewC.excludedActivityTypes = @[];
+        [self presentViewController:activityViewC animated:YES completion:nil];
+    }
 }
 
 /*

@@ -22,47 +22,47 @@
                             @{
                                 @"location":@[@"19.585",@"-88.5919"],
                                 @"title":@"Chunhuhub",
-                                @"description":@"Descubre esta comunidad que significa “tronco del huhub” en lengua maya."
+                                @"description":NSLocalizedString(@"Descubre esta comunidad que significa “tronco del huhub” en lengua maya.",nil)
                             },
                             @{
                                 @"location":@[@"19.9341",@"-88.805"],
                                 @"title":@"Kantemó",
-                                @"description":@"Atrévete a explorar la misteriosa Cueva de las Serpientes Colgantes."
+                                @"description":NSLocalizedString(@"Atrévete a explorar la misteriosa Cueva de las Serpientes Colgantes.",nil)
                             },
                             @{
                                 @"location":@[@"19.5675",@"-88.0353"],
                                 @"title":@"Felipe Carrillo Puerto",
-                                @"description":@"Antiguo santuario maya conocido como 'Pueblo de Guerreros'."
+                                @"description":NSLocalizedString(@"Antiguo santuario maya conocido como 'Pueblo de Guerreros'.",nil)
                             },
                             @{
                                 @"location":@[@"19.8397",@"-88.1281"],
                                 @"title":@"Señor",
-                                @"description":@"Descubre costumbres y tradiciones mayas a través de sus habitantes."
+                                @"description":NSLocalizedString(@"Descubre costumbres y tradiciones mayas a través de sus habitantes.",nil)
                             },
                             @{
                                 @"location":@[@"20.1896",@"-88.3772"],
                                 @"title":@"Thiosuco",
-                                @"description":@"Población más antigua famosa por sus construcciones coloniales."
+                                @"description":NSLocalizedString(@"Población más antigua famosa por sus construcciones coloniales.",nil)
                             },
                             @{
                                 @"location":@[@"19.3106",@"-87.45"],
                                 @"title":@"Punta Herrero",
-                                @"description":@"Encantadora comunidad de pescadores, ideal para pesca deportiva."
+                                @"description":NSLocalizedString(@"Encantadora comunidad de pescadores, ideal para pesca deportiva.",nil)
                             },
                             @{
                                 @"location":@[@"20.078",@"-87.616"],
                                 @"title":@"Muyil",
-                                @"description":@"Viaja a un antiguo puerto maya rodeado por la selva."
+                                @"description":NSLocalizedString(@"Viaja a un antiguo puerto maya rodeado por la selva.",nil)
                             },
                             @{
                                 @"location":@[@"19.7996",@"-87.477"],
                                 @"title":@"Punta Allen",
-                                @"description":@"Descubre un paraíso de arenas blancas a 50 km de Tulum."
+                                @"description":NSLocalizedString(@"Descubre un paraíso de arenas blancas a 50 km de Tulum.",nil)
                             },
                             @{
                                 @"location":@[@"19.1429",@"-88.1677"],
                                 @"title":@"Noh bec",
-                                @"description":@"Déjate envolver en la majestuosidad de los árboles milenarios."
+                                @"description":NSLocalizedString(@"Déjate envolver en la majestuosidad de los árboles milenarios.",nil)
                             }
                         ];
     

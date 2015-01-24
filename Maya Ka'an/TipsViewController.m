@@ -9,7 +9,7 @@
 #import "TipsViewController.h"
 
 @interface TipsViewController () <KMAccordionTableViewControllerDataSource,KMAccordionTableViewControllerDelegate>
-
+@property (nonatomic,strong) UIView *viewGeneralSection;
 @end
 
 @implementation TipsViewController
@@ -30,6 +30,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self selector:@selector(orientationChanged:)
+     name:UIDeviceOrientationDidChangeNotification
+     object:[UIDevice currentDevice]];
     self.items = [[NSMutableArray alloc] init];
     NSArray *directoryItems=
     @[
@@ -37,17 +42,17 @@
       @{
           @"section":@"CHUNHUHUB",
           @"content":
-              @[ @"-Bloqueador biodegradable",
-                 @"-Repelente biodegradable",
-                 @"-Pantalones de tela ligera o de campo",
-                 @"-Ropa cómoda",
-                 @"-Sandalias",
-                 @"-Gorra",
-                 @"-Cámara fotográfica",
-                 @"-Traje de baño",
-                 @"-Toalla",
-                 @"-Opción de hospedaje en cabañas rústicas",
-                 @"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia"
+              @[ NSLocalizedString(@"-Bloqueador biodegradable",nil),
+                 NSLocalizedString(@"-Repelente biodegradable",nil),
+                 NSLocalizedString(@"-Pantalones de tela ligera o de campo",nil),
+                 NSLocalizedString(@"-Ropa cómoda",nil),
+                 NSLocalizedString(@"-Sandalias",nil),
+                 NSLocalizedString(@"-Gorra",nil),
+                 NSLocalizedString(@"-Cámara fotográfica",nil),
+                 NSLocalizedString(@"-Traje de baño",nil),
+                 NSLocalizedString(@"-Toalla",nil),
+                 NSLocalizedString(@"-Opción de hospedaje en cabañas rústicas",nil),
+                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil)
                 ]
           },
       
@@ -55,18 +60,18 @@
       @{
           @"section":@"FELIPE CARRILLO PUERTO",
           @"content":
-              @[ @"-Bloqueador biodegradable",
-                 @"-Repelente biodegradable",
-                 @"-Pantalones de tela ligera o de campo",
-                 @"-Ropa cómoda",
-                 @"-Sandalias",
-                 @"-Gorra",
-                 @"-Cámara fotográfica",
-                 @"-Traje de baño",
-                 @"-Toalla",
-                 @"-Opción de hospedaje en cabañas rústicas",
-                 @"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",
-                 @"-En el Santuario de la Cruz Parlante no esta permitido el acceso con zapatos, ni tomar fotografías"
+              @[ NSLocalizedString(@"-Bloqueador biodegradable",nil),
+                 NSLocalizedString(@"-Repelente biodegradable",nil),
+                 NSLocalizedString(@"-Pantalones de tela ligera o de campo",nil),
+                 NSLocalizedString(@"-Ropa cómoda",nil),
+                 NSLocalizedString(@"-Sandalias",nil),
+                 NSLocalizedString(@"-Gorra",nil),
+                 NSLocalizedString(@"-Cámara fotográfica",nil),
+                 NSLocalizedString(@"-Traje de baño",nil),
+                 NSLocalizedString(@"-Toalla",nil),
+                 NSLocalizedString(@"-Opción de hospedaje en cabañas rústicas",nil),
+                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil),
+                 NSLocalizedString(@"-En el Santuario de la Cruz Parlante no esta permitido el acceso con zapatos, ni tomar fotografías",nil)
                 ]
           },
       
@@ -74,15 +79,15 @@
       @{
           @"section":@"KANTEMÓ",
           @"content":
-              @[ @"-Repelente biodegradable",
-                 @"-Zapatos cómodos",
-                 @"-Pantalones",
-                 @"-Cámara fotográfica o de video",
-                 @"-Traje de baño",
-                 @"-Toalla",
-                 @"-Ropa para cambiarse",
-                 @"-Binoculares",
-                 @"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia"
+              @[ NSLocalizedString(@"-Repelente biodegradable",nil),
+                 NSLocalizedString(@"-Zapatos cómodos",nil),
+                 NSLocalizedString(@"-Pantalones",nil),
+                 NSLocalizedString(@"-Cámara fotográfica o de video",nil),
+                 NSLocalizedString(@"-Traje de baño",nil),
+                 NSLocalizedString(@"-Toalla",nil),
+                 NSLocalizedString(@"-Ropa para cambiarse",nil),
+                 NSLocalizedString(@"-Binoculares",nil),
+                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil)
                 ]
           },
       
@@ -90,15 +95,15 @@
       @{
           @"section":@"MUYIL",
           @"content":
-              @[ @"-Bloqueador biodegradable",
-                 @"-Repelente biodegradable",
-                 @"-Ropa y zapatos cómodos",
-                 @"-Gorra",
-                 @"-Cámara fotográfica o de video",
-                 @"-Traje de baño",
-                 @"-Toalla",
-                 @"-Ropa para cambiarse",
-                 @"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia"
+              @[ NSLocalizedString(@"-Bloqueador biodegradable",nil),
+                 NSLocalizedString(@"-Repelente biodegradable",nil),
+                 NSLocalizedString(@"-Ropa y zapatos cómodos",nil),
+                 NSLocalizedString(@"-Gorra",nil),
+                 NSLocalizedString(@"-Cámara fotográfica o de video",nil),
+                 NSLocalizedString(@"-Traje de baño",nil),
+                 NSLocalizedString(@"-Toalla",nil),
+                 NSLocalizedString(@"-Ropa para cambiarse",nil),
+                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil)
                 ]
           },
       
@@ -106,14 +111,14 @@
       @{
           @"section":@"NOH-BEC",
           @"content":
-              @[ @"-Repelente biodegradable",
-                 @"-Ropa y zapatos cómodos",
-                 @"-Cámara fotográfica o de video",
-                 @"-Traje de baño",
-                 @"-Toalla",
-                 @"-Ropa para cambiarse",
-                 @"-Binoculares",
-                 @"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia"
+              @[ NSLocalizedString(@"-Repelente biodegradable",nil),
+                 NSLocalizedString(@"-Ropa y zapatos cómodos",nil),
+                 NSLocalizedString(@"-Cámara fotográfica o de video",nil),
+                 NSLocalizedString(@"-Traje de baño",nil),
+                 NSLocalizedString(@"-Toalla",nil),
+                 NSLocalizedString(@"-Ropa para cambiarse",nil),
+                 NSLocalizedString(@"-Binoculares",nil),
+                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil)
                 ]
           },
       
@@ -121,17 +126,17 @@
       @{
           @"section":@"PUNTA ALLEN",
           @"content":
-              @[ @"-Bloqueador biodegradable",
-                 @"-Repelente biodegradable",
-                 @"-Ropa y zapatos cómodos",
-                 @"-Gorra",
-                 @"-Cámara fotográfica o de video",
-                 @"-Traje de baño",
-                 @"-Toalla",
-                 @"-Ropa para cambiarse",
-                 @"-Lentes para sol",
-                 @"-Binoculares",
-                 @"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia"
+              @[ NSLocalizedString(@"-Bloqueador biodegradable",nil),
+                 NSLocalizedString(@"-Repelente biodegradable",nil),
+                 NSLocalizedString(@"-Ropa y zapatos cómodos",nil),
+                 NSLocalizedString(@"-Gorra",nil),
+                 NSLocalizedString(@"-Cámara fotográfica o de video",nil),
+                 NSLocalizedString(@"-Traje de baño",nil),
+                 NSLocalizedString(@"-Toalla",nil),
+                 NSLocalizedString(@"-Ropa para cambiarse",nil),
+                 NSLocalizedString(@"-Lentes para sol",nil),
+                 NSLocalizedString(@"-Binoculares",nil),
+                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil)
                 ]
           },
       
@@ -139,14 +144,14 @@
       @{
           @"section":@"PUNTA HERRERO",
           @"content":
-              @[ @"-Repelente biodegradable",
-                 @"-Ropa y zapatos cómodos",
-                 @"-Cámara fotográfica o de video",
-                 @"-Traje de baño",
-                 @"-Toalla",
-                 @"-Ropa para cambiarse",
-                 @"-Binoculares",
-                 @"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia"
+              @[ NSLocalizedString(@"-Repelente biodegradable",nil),
+                 NSLocalizedString(@"-Ropa y zapatos cómodos",nil),
+                 NSLocalizedString(@"-Cámara fotográfica o de video",nil),
+                 NSLocalizedString(@"-Traje de baño",nil),
+                 NSLocalizedString(@"-Toalla",nil),
+                 NSLocalizedString(@"-Ropa para cambiarse",nil),
+                 NSLocalizedString(@"-Binoculares",nil),
+                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil)
                 ]
           },
       
@@ -154,14 +159,14 @@
       @{
           @"section":@"SEÑOR",
           @"content":
-              @[ @"-Repelente biodegradable",
-                 @"-Ropa y zapatos cómodos",
-                 @"-Cámara fotográfica o de video",
-                 @"-Traje de baño",
-                 @"-Toalla",
-                 @"-Ropa para cambiarse",
-                 @"-Binoculares",
-                 @"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia"
+              @[ NSLocalizedString(@"-Repelente biodegradable",nil),
+                 NSLocalizedString(@"-Ropa y zapatos cómodos",nil),
+                 NSLocalizedString(@"-Cámara fotográfica o de video",nil),
+                 NSLocalizedString(@"-Traje de baño",nil),
+                 NSLocalizedString(@"-Toalla",nil),
+                 NSLocalizedString(@"-Ropa para cambiarse",nil),
+                 NSLocalizedString(@"-Binoculares",nil),
+                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil)
                 ]
           },
       
@@ -169,12 +174,12 @@
       @{
           @"section":@"TIHOSUCO",
           @"content":
-              @[ @"-Ropa cómoda",
-                 @"-Zapatos deportivos",
-                 @"-Sandalias",
-                 @"-Gorra",
-                 @"-Cámara fotográfica",
-                 @"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia"
+              @[ NSLocalizedString(@"-Ropa cómoda",nil),
+                 NSLocalizedString(@"-Zapatos deportivos",nil),
+                 NSLocalizedString(@"-Sandalias",nil),
+                 NSLocalizedString(@"-Gorra",nil),
+                 NSLocalizedString(@"-Cámara fotográfica",nil),
+                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil)
                 ]
           },
       ];
@@ -247,28 +252,28 @@
           
           
             @{
-                @"title":@"Ropa cómoda",
+                @"title":NSLocalizedString(@"Ropa cómoda",nil),
                 @"image":@"tips_ropa_comoda.png"
             },
             @{
-                @"title":@"Gorra",
+                @"title":NSLocalizedString(@"Gorra",nil),
                 @"image":@"tips_gorra.png"
             },
             @{
-                @"title":@"Bloqueador biodregadable",
+                @"title":NSLocalizedString(@"Bloqueador biodregadable",nil),
                 @"image":@"tips_bloqueador.png"
             },
             @{
-                @"title":@"Traje de Baño",
+                @"title":NSLocalizedString(@"Traje de Baño",nil),
                 @"image":@"tips_traje_bano.png"
             },
             @{
-                @"title":@"Cámara forográfica",
+                @"title":NSLocalizedString(@"Cámara forográfica",nil),
                 @"image":@"tips_camara.png"
             },
             
             @{
-                @"title":@"Llevar efectivo",
+                @"title":NSLocalizedString(@"Llevar efectivo",nil),
                 @"image":@"tips_dinero.png"
             }
             
@@ -295,10 +300,10 @@
         case 375:
             iconWidth = 118;
             iconHeight = 68;
-            NSLog(@"--6--");
+            NSLog(@"--6--667");
             break;
         case 414:
-            NSLog(@"--6+--");
+            NSLog(@"--6+--667");
             iconWidth = 125;
             iconHeight = 72;
             initialMarginLeft = 20;
@@ -307,6 +312,8 @@
         default:
             break;
     }
+    NSLog(@"%i",(int) screenBounds.size.width);
+    NSLog(@"%i",(int) screenBounds.size.height);
     
     int iconMarginLeft = initialMarginLeft;
     int initialMarginTop = 20;
@@ -315,7 +322,7 @@
     int labelHeight = 40;
     int labelMarginTop = iconHeight+iconMarginTop;
     
-    UIView *viewGeneralSection = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, sectionHeight)];
+    self.viewGeneralSection = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, sectionHeight)];
     //300
     //375
     //414
@@ -334,7 +341,7 @@
         tipIcon.image = [UIImage imageNamed:myItems[@"image"]];
         //[tipIcon.layer setBorderColor: [[UIColor blackColor] CGColor]];
         //[tipIcon.layer setBorderWidth: 1.0];
-        [viewGeneralSection addSubview:tipIcon];
+        [self.viewGeneralSection addSubview:tipIcon];
         
         UILabel *tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(iconMarginLeft, labelMarginTop, labelWidth, labelHeight)];
         tipLabel.text = myItems[@"title"];
@@ -345,7 +352,7 @@
         tipLabel.textAlignment = NSTextAlignmentCenter;
         //[tipLabel.layer setBorderColor: [[UIColor redColor] CGColor]];
         //[tipLabel.layer setBorderWidth: 1.0];
-        [viewGeneralSection addSubview:tipLabel];
+        [self.viewGeneralSection addSubview:tipLabel];
         
         if (count == 3){
             labelMarginTop = (labelMarginTop*2)+iconMarginTop+initialMarginTop;
@@ -360,7 +367,7 @@
     }
     
     KMSection *section1 = [[KMSection alloc] init];
-    section1.view = viewGeneralSection;
+    section1.view = self.viewGeneralSection;
     section1.title = @"General";
     section1.colorForBackground = self.rowColor;
     
@@ -419,6 +426,57 @@
 }
 
 #pragma mark - KMAccordionTableViewControllerDelegate
+- (void) orientationChanged:(NSNotification *)note
+{
+    UIDevice * device = note.object;
+    switch(device.orientation)
+    {
+        case UIDeviceOrientationLandscapeLeft:{
+            CGRect screenBounds = [[UIScreen mainScreen] bounds];
+            switch ((int) screenBounds.size.height) {
+                case 320:
+                    self.viewGeneralSection.frame = CGRectMake(100, 0, self.viewGeneralSection.frame.size.width, self.viewGeneralSection.frame.size.height);
+                    break;
+                case 375:
+                    self.viewGeneralSection.frame = CGRectMake(125, 0, self.viewGeneralSection.frame.size.width, self.viewGeneralSection.frame.size.height);
+                    break;
+                case 414:
+                    self.viewGeneralSection.frame = CGRectMake(150, 0, self.viewGeneralSection.frame.size.width, self.viewGeneralSection.frame.size.height);
+                    
+                    break;
+                default:
+                    break;
+            }
+            
+            break;
+        }
+        case UIDeviceOrientationLandscapeRight:{
+            CGRect screenBounds = [[UIScreen mainScreen] bounds];
+            switch ((int) screenBounds.size.height) {
+                case 320:
+                    self.viewGeneralSection.frame = CGRectMake(100, 0, self.viewGeneralSection.frame.size.width, self.viewGeneralSection.frame.size.height);
+                    break;
+                case 375:
+                    self.viewGeneralSection.frame = CGRectMake(125, 0, self.viewGeneralSection.frame.size.width, self.viewGeneralSection.frame.size.height);
+                    break;
+                case 414:
+                    self.viewGeneralSection.frame = CGRectMake(175, 0, self.viewGeneralSection.frame.size.width, self.viewGeneralSection.frame.size.height);
+
+                    break;
+                default:
+                    break;
+            }
+
+            break;
+        }
+        case UIDeviceOrientationPortrait:
+            self.viewGeneralSection.frame = CGRectMake(0, 0, self.viewGeneralSection.frame.size.width, self.viewGeneralSection.frame.size.height);
+           
+            break;
+        default:
+            break;
+    };
+}
 
 - (void)accordionTableViewControllerSectionDidClosed:(KMSection *)section
 {
@@ -429,6 +487,7 @@
 {
     NSLog(@"%s",__PRETTY_FUNCTION__);
 }
+
 
 
 @end

@@ -1,0 +1,90 @@
+
+/* Class = "IBUIViewController"; title = "Mapa"; ObjectID = "0eO-cx-OHT"; */
+"0eO-cx-OHT.title" = "Mapa";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "1yv-Bn-66a"; */
+"1yv-Bn-66a.normalTitle" = "Button";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "5xP-B2-Jrb"; */
+"5xP-B2-Jrb.normalTitle" = "Button";
+
+/* Class = "IBUILabel"; text = "Escapada"; ObjectID = "67Y-qO-Lyk"; */
+"67Y-qO-Lyk.text" = "Escapada";
+
+/* Class = "IBUITableViewController"; title = "Directorio"; ObjectID = "9oM-Ct-Cbp"; */
+"9oM-Ct-Cbp.title" = "Directorio";
+
+/* Class = "IBUITableViewController"; title = "Tips"; ObjectID = "BK0-8c-hV7"; */
+"BK0-8c-hV7.title" = "Tips";
+
+/* Class = "IBUIViewController"; title = "Galería"; ObjectID = "Gjq-gR-Vtc"; */
+"Gjq-gR-Vtc.title" = "Galería";
+
+/* Class = "IBUILabel"; text = "Destino"; ObjectID = "HZ5-Gb-eYv"; */
+"HZ5-Gb-eYv.text" = "Destino";
+
+/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sapien urna, sagittis eget nulla ac, elementum bibendum nibh. Maecenas quis rhoncus ligula. Aenean metus leo, vestibulum eu consequat sed, rutrum ac nunc. In quis sapien mattis, sagittis felis at, scelerisque justo. In hac habitasse platea dictumst. Curabitur bibendum, lacus et scelerisque accumsan, lectus sem pretium mauris, at gravida massa risus eget urna. Morbi blandit, lectus eu tristique ultricies, lectus orci feugiat lacus, eu laoreet eros orci vitae odio. Mauris ultrices tincidunt nisi, at pharetra urna blandit fermentum. "; ObjectID = "Juh-jQ-Avl"; */
+"Juh-jQ-Avl.text" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sapien urna, sagittis eget nulla ac, elementum bibendum nibh. Maecenas quis rhoncus ligula. Aenean metus leo, vestibulum eu consequat sed, rutrum ac nunc. In quis sapien mattis, sagittis felis at, scelerisque justo. In hac habitasse platea dictumst. Curabitur bibendum, lacus et scelerisque accumsan, lectus sem pretium mauris, at gravida massa risus eget urna. Morbi blandit, lectus eu tristique ultricies, lectus orci feugiat lacus, eu laoreet eros orci vitae odio. Mauris ultrices tincidunt nisi, at pharetra urna blandit fermentum. ";
+
+/* Class = "IBUIViewController"; title = "Destinos"; ObjectID = "Kxl-aM-mam"; */
+"Kxl-aM-mam.title" = "Destinos";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "LiY-nP-b5d"; */
+"LiY-nP-b5d.normalTitle" = "Button";
+
+/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sapien urna, sagittis eget nulla ac, elementum bibendum nibh. Maecenas quis rhoncus ligula. Aenean metus leo, vestibulum eu consequat sed, rutrum ac nunc. In quis sapien mattis, sagittis felis at, scelerisque justo. In hac habitasse platea dictumst. Curabitur bibendum, lacus et scelerisque accumsan, lectus sem pretium mauris, at gravida massa risus eget urna. Morbi blandit, lectus eu tristique ultricies, lectus orci feugiat lacus, eu laoreet eros orci vitae odio. Mauris ultrices tincidunt nisi, at pharetra urna blandit fermentum. "; ObjectID = "TWd-aS-tNk"; */
+"TWd-aS-tNk.text" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sapien urna, sagittis eget nulla ac, elementum bibendum nibh. Maecenas quis rhoncus ligula. Aenean metus leo, vestibulum eu consequat sed, rutrum ac nunc. In quis sapien mattis, sagittis felis at, scelerisque justo. In hac habitasse platea dictumst. Curabitur bibendum, lacus et scelerisque accumsan, lectus sem pretium mauris, at gravida massa risus eget urna. Morbi blandit, lectus eu tristique ultricies, lectus orci feugiat lacus, eu laoreet eros orci vitae odio. Mauris ultrices tincidunt nisi, at pharetra urna blandit fermentum. ";
+
+/* Class = "IBUILabel"; text = "Actividades"; ObjectID = "V2k-f9-62L"; */
+"V2k-f9-62L.text" = "Actividades";
+
+/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "; ObjectID = "Vzm-FU-QJE"; */
+"Vzm-FU-QJE.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ";
+
+/* Class = "IBUIViewController"; title = "Destino"; ObjectID = "W0e-04-Yvk"; */
+"W0e-04-Yvk.title" = "Destino";
+
+/* Class = "IBUIButton"; normalTitle = "Ubicar en Mapas"; ObjectID = "Z01-CX-kSi"; */
+"Z01-CX-kSi.normalTitle" = "Ubicar en Mapas";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "apF-A4-cLd"; */
+"apF-A4-cLd.normalTitle" = "Button";
+
+/* Class = "IBUIViewController"; title = "Escapada"; ObjectID = "bYt-LP-7Jo"; */
+"bYt-LP-7Jo.title" = "Escapada";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "baW-xs-TCo"; */
+"baW-xs-TCo.text" = "Label";
+
+/* Class = "IBUIViewController"; title = "Escapadas"; ObjectID = "fSv-Jb-a7d"; */
+"fSv-Jb-a7d.title" = "Escapadas";
+
+/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "; ObjectID = "k3K-hc-9j2"; */
+"k3K-hc-9j2.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ";
+
+/* Class = "IBUIViewController"; title = "Mapa"; ObjectID = "lDR-k4-dn9"; */
+"lDR-k4-dn9.title" = "Mapa";
+
+/* Class = "IBUILabel"; text = "Actividades"; ObjectID = "nik-S7-6wQ"; */
+"nik-S7-6wQ.text" = "Actividades";
+
+/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "; ObjectID = "q0h-Wm-yqU"; */
+"q0h-Wm-yqU.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "sVm-9Y-vTh"; */
+"sVm-9Y-vTh.normalTitle" = "Button";
+
+/* Class = "IBUILabel"; text = "Ubicacion"; ObjectID = "t3T-tU-CrW"; */
+"t3T-tU-CrW.text" = "Ubicacion";
+
+/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "; ObjectID = "v1d-3F-qcW"; */
+"v1d-3F-qcW.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "vRL-3k-V5u"; */
+"vRL-3k-V5u.normalTitle" = "Button";
+
+/* Class = "IBUIViewController"; title = "Imagen"; ObjectID = "y2h-AB-VRd"; */
+"y2h-AB-VRd.title" = "Imagen";
+
+/* Class = "IBUILabel"; text = "Ubicacion"; ObjectID = "y5x-bk-NFE"; */
+"y5x-bk-NFE.text" = "Ubicacion";
