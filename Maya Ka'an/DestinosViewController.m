@@ -18,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];
+    NSLog(@"%@",language);
     self.destinosItems = [[NSMutableArray alloc] init];
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
                                                       message:NSLocalizedString(@"Necesitas activar tu conexión a internet.",nil)
@@ -53,13 +55,13 @@
     NSDictionary *response= [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
     if (response){
         
-        NSLog(@"%@",response[@"destinos"]);
+        //NSLog(@"%@",response[@"destinos"]);
 
         
         for (NSDictionary *dataDictionary in response[@"destinos"]){
 
             [self.destinosItems addObject:dataDictionary];
-            NSLog(@"%@",dataDictionary[@"nombre"]);
+            //NSLog(@"%@",dataDictionary[@"nombre"]);
         }
         
         
@@ -143,16 +145,29 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     return UIEdgeInsetsMake(top, left, bottom, right);
 }
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];
+    NSLog(@"%@",language);
     DestinoViewController *View = [[DestinoViewController alloc] init];
     View = [segue destinationViewController];
     NSArray *arrayOfIndexPaths = [self.DestinosCollection indexPathsForSelectedItems];
     NSIndexPath *path = [arrayOfIndexPaths firstObject];
     NSDictionary *destinoDictionary = [self.destinosItems objectAtIndex:path.row];
     View.tituloDestino = destinoDictionary[@"nombre"];
-    View.descriptionDestino = destinoDictionary[@"des_cripcion"];
     View.imagenDestino = destinoDictionary[@"img_destino"];
-    View.actividadesDestino = destinoDictionary[@"actividades"];
-    View.ubicacionDestino = destinoDictionary[@"ubicacion"];
+    
+    if ([language isEqualToString:@"es-MX"] || [language isEqualToString:@"es"]) {
+        View.descriptionDestino = destinoDictionary[@"des_cripcion"];
+        View.actividadesDestino = destinoDictionary[@"actividades"];
+        View.ubicacionDestino = destinoDictionary[@"ubicacion"];
+    }
+    else{
+        View.descriptionDestino = destinoDictionary[@"des_cripcion_en"];
+        View.actividadesDestino = destinoDictionary[@"actividades_en"];
+        View.ubicacionDestino = destinoDictionary[@"ubicacion_en"];
+        
+    }
+#warning "verificar en ipad y verificar idiomas"
+    
 }
 /*
 #pragma mark - Navigation

@@ -150,6 +150,8 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];
+    NSLog(@"%@",language);
     EscapadaViewController *View = [[EscapadaViewController alloc] init];
     View = [segue destinationViewController];
     NSArray *arrayOfIndexPaths = [self.EscapadasCollection indexPathsForSelectedItems];
@@ -160,6 +162,18 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     View.imagenEscapada = escapdaDictionary[@"img_destino"];
     View.ubicacionEscapada = escapdaDictionary[@"ubicacion"];
     View.actividadesEscapada = escapdaDictionary[@"actividades"];
+    if ([language isEqualToString:@"es-MX"] || [language isEqualToString:@"es"]) {
+        View.descriptionEscapada = escapdaDictionary[@"des_cripcion"];
+        View.ubicacionEscapada = escapdaDictionary[@"ubicacion"];
+        View.actividadesEscapada = escapdaDictionary[@"actividades"];
+    }
+    else{
+    
+        View.descriptionEscapada = escapdaDictionary[@"des_cripcion_en"];
+        View.ubicacionEscapada = escapdaDictionary[@"ubicacion_en"];
+        View.actividadesEscapada = escapdaDictionary[@"actividades:en"];
+
+    }
 }
 
 

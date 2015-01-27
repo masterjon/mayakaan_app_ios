@@ -7,7 +7,7 @@
 //
 
 #import "GaleriaDetalleViewController.h"
-
+#import "MBProgressHUD.h"
 @interface GaleriaDetalleViewController ()
 @property (strong, nonatomic) NSURLSession *session;
 @property (strong,nonatomic) NSURLSessionConfiguration *sessionConfiguration;
@@ -28,7 +28,12 @@
                                                initWithBarButtonSystemItem:UIBarButtonSystemItemAction
                                                target:self
                                                action:@selector(shareAction:)];
-    
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                      message:NSLocalizedString(@"Necesitas activar tu conexión a internet.",nil)
+                                                     delegate:self
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSString *imageUrlString = self.imagenUrl;
     NSURL *imageUrl = [NSURL URLWithString:imageUrlString
                              relativeToURL:[NSURL URLWithString:@"http://mayakaan.travel/mayakaan_api/media/"]];
@@ -45,11 +50,12 @@
                 //NSLog(@"image height: %f",image.size.height);
                
                [_galleryImageView setImage:self.image];
-                
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
                 
             });
         }
         else{
+            [message show];
         }
         
         
@@ -83,6 +89,10 @@
         activityViewC.excludedActivityTypes = @[];
         [self presentViewController:activityViewC animated:YES completion:nil];
     }
+}
+- (void)alertView:(UIAlertView *)alertView
+clickedButtonAtIndex:(NSInteger)buttonIndex{
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 /*
 #pragma mark - Navigation

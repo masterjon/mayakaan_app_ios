@@ -70,7 +70,7 @@
 }
 -(IBAction)shareAction:(UIButton *)sender {
     
-    NSString *shareText= [@"Visita " stringByAppendingString:[ self.tituloDestino stringByAppendingString:@" - Maya Ka'an"] ];
+    NSString *shareText= [NSLocalizedString(@"Visita ",nil) stringByAppendingString:[ self.tituloDestino stringByAppendingString:@" - Maya Ka'an"] ];
     UIImage *mergedImage = [self imagen];
     CGImageRef cgref = [mergedImage CGImage];
     CIImage *cim = [mergedImage CIImage];

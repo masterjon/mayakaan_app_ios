@@ -49,6 +49,8 @@
 /* Begin PBXFileReference section */
 		BCA6C4031A5B5005003B495E /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
 		BCA6C4041A5B5005003B495E /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
+		FB0EBC0C1A73281D0032F029 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FB0EBC0D1A73282D0032F029 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		FB1045B31A65A830000918A7 /* InteractiveMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveMapViewController.h; sourceTree = "<group>"; };
 		FB1045B41A65A830000918A7 /* InteractiveMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveMapViewController.m; sourceTree = "<group>"; };
 		FB1045B61A65F230000918A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,10 +60,13 @@
 		FB79C8581A521D8100755704 /* DirectorioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectorioViewController.m; sourceTree = "<group>"; };
 		FBA85B011A72D732006FA661 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		FBA85B031A72DDFA006FA661 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		FBA85B0F1A72E037006FA661 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FBA85B101A72F5E0006FA661 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		FBA85B111A72F5E0006FA661 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		FBA85B131A7321B3006FA661 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FBA85B141A73247C006FA661 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		FBA85B171A7324BB006FA661 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Main.strings"; sourceTree = "<group>"; };
+		FBA85B1C1A7324FC006FA661 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FBA85B1D1A73252B006FA661 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FBA85B1E1A73253F006FA661 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "es-MX"; path = "es-MX.lproj/LaunchScreen.xib"; sourceTree = "<group>"; };
 		FBE18E0F1A66EDDF002970F8 /* DestinoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinoViewController.h; sourceTree = "<group>"; };
 		FBE18E101A66EDDF002970F8 /* DestinoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinoViewController.m; sourceTree = "<group>"; };
 		FBF353541A683E3200701034 /* EscapadasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EscapadasViewController.h; sourceTree = "<group>"; };
@@ -309,6 +314,8 @@
 			knownRegions = (
 				Base,
 				en,
+				es,
+				"es-MX",
 			);
 			mainGroup = FBFB3D371A49F31E008DE9B6;
 			productRefGroup = FBFB3D411A49F31E008DE9B6 /* Products */;
@@ -392,8 +399,9 @@
 		FBA85B0E1A72E031006FA661 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FBA85B0F1A72E037006FA661 /* en */,
-				FBA85B131A7321B3006FA661 /* Base */,
+				FBA85B1C1A7324FC006FA661 /* en */,
+				FB0EBC0C1A73281D0032F029 /* es */,
+				FB0EBC0D1A73282D0032F029 /* es-MX */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -403,6 +411,8 @@
 			children = (
 				FBFB3D4E1A49F31E008DE9B6 /* Base */,
 				FBA85B011A72D732006FA661 /* en */,
+				FBA85B141A73247C006FA661 /* es */,
+				FBA85B171A7324BB006FA661 /* es-MX */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -412,6 +422,8 @@
 			children = (
 				FBFB3D531A49F31E008DE9B6 /* Base */,
 				FBA85B031A72DDFA006FA661 /* en */,
+				FBA85B1D1A73252B006FA661 /* es */,
+				FBA85B1E1A73253F006FA661 /* es-MX */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -506,7 +518,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -521,7 +533,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
