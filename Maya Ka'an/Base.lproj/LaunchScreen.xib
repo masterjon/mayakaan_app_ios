@@ -17,8 +17,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="HLf-J9-aog" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="96u-b7-nFf"/>
+                <constraint firstItem="HLf-J9-aog" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LTS-DC-reU"/>
                 <constraint firstAttribute="bottom" secondItem="HLf-J9-aog" secondAttribute="bottom" id="ODN-Q5-mjf"/>
                 <constraint firstItem="HLf-J9-aog" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Pfr-ye-GgQ"/>
+                <constraint firstAttribute="trailing" secondItem="HLf-J9-aog" secondAttribute="trailing" id="Ygk-sv-4J7"/>
+                <constraint firstAttribute="bottom" secondItem="HLf-J9-aog" secondAttribute="bottom" id="dQH-x9-Zgx"/>
                 <constraint firstAttribute="trailing" secondItem="HLf-J9-aog" secondAttribute="trailing" id="eHn-Co-I5c"/>
                 <constraint firstItem="HLf-J9-aog" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fU9-h5-Inj"/>
             </constraints>

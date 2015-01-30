@@ -5,7 +5,8 @@
 //  Created by Alberto Enriquez on 15/01/15.
 //  Copyright (c) 2015 Punk E-Marketing & Consulting. All rights reserved.
 //
-
+#define IDIOM    UI_USER_INTERFACE_IDIOM()
+#define IPAD     UIUserInterfaceIdiomPad
 #import "GaleriaDetalleViewController.h"
 #import "MBProgressHUD.h"
 @interface GaleriaDetalleViewController ()
@@ -23,7 +24,7 @@
     viewTitle.text=self.tituloImagen;
     self.navigationItem.titleView=viewTitle;
     [viewTitle sizeToFit];
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"fondo"]];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"fondo1"]];
     self.navigationItem.rightBarButtonItem =  [[UIBarButtonItem alloc]
                                                initWithBarButtonSystemItem:UIBarButtonSystemItemAction
                                                target:self
@@ -73,7 +74,6 @@
     // Do your resizing
 }
 -(IBAction)shareAction:(UIButton *)sender {
-    
     NSString *shareText= NSLocalizedString([ self.tituloImagen stringByAppendingString:@" - Maya Ka'an"],nil);
     UIImage *mergedImage = [self image];
     CGImageRef cgref = [mergedImage CGImage];
@@ -87,6 +87,9 @@
         NSArray *items2Share= @[shareText,mergedImage];
         UIActivityViewController *activityViewC = [[UIActivityViewController alloc] initWithActivityItems:items2Share applicationActivities:nil];
         activityViewC.excludedActivityTypes = @[];
+        if ( IDIOM == IPAD ) {
+            activityViewC.popoverPresentationController.barButtonItem = self.navigationItem.rightBarButtonItem;
+        }
         [self presentViewController:activityViewC animated:YES completion:nil];
     }
 }

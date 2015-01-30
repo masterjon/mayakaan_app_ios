@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BCA6C4051A5B5005003B495E /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA6C4041A5B5005003B495E /* TipsViewController.m */; };
+		FB005A7F1A7B250E00E79ABD /* inicio.png in Resources */ = {isa = PBXBuildFile; fileRef = FB005A7E1A7B250E00E79ABD /* inicio.png */; };
 		FB1045B51A65A830000918A7 /* InteractiveMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1045B41A65A830000918A7 /* InteractiveMapViewController.m */; };
 		FB1045B71A65F230000918A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1045B61A65F230000918A7 /* Foundation.framework */; };
 		FB79C8561A51CDBA00755704 /* DestinosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB79C8551A51CDBA00755704 /* DestinosViewController.m */; };
@@ -15,6 +16,7 @@
 		FBA85B0C1A72E031006FA661 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBA85B0E1A72E031006FA661 /* Localizable.strings */; };
 		FBA85B121A72F5E0006FA661 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA85B111A72F5E0006FA661 /* MBProgressHUD.m */; };
 		FBE18E111A66EDDF002970F8 /* DestinoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE18E101A66EDDF002970F8 /* DestinoViewController.m */; };
+		FBF182B11A7999F800799E7F /* BienvenidosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF182B01A7999F800799E7F /* BienvenidosViewController.m */; };
 		FBF353561A683E3200701034 /* EscapadasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF353551A683E3200701034 /* EscapadasViewController.m */; };
 		FBF353591A68489500701034 /* EscapadaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF353581A68489500701034 /* EscapadaViewController.m */; };
 		FBF3535C1A68739700701034 /* GaleriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF3535B1A68739700701034 /* GaleriaViewController.m */; };
@@ -49,6 +51,7 @@
 /* Begin PBXFileReference section */
 		BCA6C4031A5B5005003B495E /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
 		BCA6C4041A5B5005003B495E /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
+		FB005A7E1A7B250E00E79ABD /* inicio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inicio.png; sourceTree = "<group>"; };
 		FB0EBC0C1A73281D0032F029 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FB0EBC0D1A73282D0032F029 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		FB1045B31A65A830000918A7 /* InteractiveMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveMapViewController.h; sourceTree = "<group>"; };
@@ -69,6 +72,8 @@
 		FBA85B1E1A73253F006FA661 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "es-MX"; path = "es-MX.lproj/LaunchScreen.xib"; sourceTree = "<group>"; };
 		FBE18E0F1A66EDDF002970F8 /* DestinoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinoViewController.h; sourceTree = "<group>"; };
 		FBE18E101A66EDDF002970F8 /* DestinoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinoViewController.m; sourceTree = "<group>"; };
+		FBF182AF1A7999F800799E7F /* BienvenidosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BienvenidosViewController.h; sourceTree = "<group>"; };
+		FBF182B01A7999F800799E7F /* BienvenidosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BienvenidosViewController.m; sourceTree = "<group>"; };
 		FBF353541A683E3200701034 /* EscapadasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EscapadasViewController.h; sourceTree = "<group>"; };
 		FBF353551A683E3200701034 /* EscapadasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EscapadasViewController.m; sourceTree = "<group>"; };
 		FBF353571A68489500701034 /* EscapadaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EscapadaViewController.h; sourceTree = "<group>"; };
@@ -129,6 +134,7 @@
 		FBFB3D371A49F31E008DE9B6 = {
 			isa = PBXGroup;
 			children = (
+				FB005A7E1A7B250E00E79ABD /* inicio.png */,
 				FB1045B61A65F230000918A7 /* Foundation.framework */,
 				FBFE0FBD1A609626006CE6B1 /* MapKit.framework */,
 				FBFB3D421A49F31E008DE9B6 /* Maya Ka'an */,
@@ -183,6 +189,8 @@
 				FBF3535D1A6878CF00701034 /* GaleriaDetalleViewController.h */,
 				FBF3535E1A6878CF00701034 /* GaleriaDetalleViewController.m */,
 				FBA85B0E1A72E031006FA661 /* Localizable.strings */,
+				FBF182AF1A7999F800799E7F /* BienvenidosViewController.h */,
+				FBF182B01A7999F800799E7F /* BienvenidosViewController.m */,
 			);
 			path = "Maya Ka'an";
 			sourceTree = "<group>";
@@ -333,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB005A7F1A7B250E00E79ABD /* inicio.png in Resources */,
 				FBA85B0C1A72E031006FA661 /* Localizable.strings in Resources */,
 				FBFB3D4F1A49F31E008DE9B6 /* Main.storyboard in Resources */,
 				FBFE07A31A530A7D00CF3AC0 /* KMSectionHeaderView.xib in Resources */,
@@ -362,6 +371,7 @@
 				FBFB3D491A49F31E008DE9B6 /* AppDelegate.m in Sources */,
 				FBF353591A68489500701034 /* EscapadaViewController.m in Sources */,
 				FBFE0FBC1A606418006CE6B1 /* MapViewController.m in Sources */,
+				FBF182B11A7999F800799E7F /* BienvenidosViewController.m in Sources */,
 				FBA85B121A72F5E0006FA661 /* MBProgressHUD.m in Sources */,
 				FB1045B51A65A830000918A7 /* InteractiveMapViewController.m in Sources */,
 				FBFE07A51A530A7D00CF3AC0 /* KMSection.m in Sources */,
@@ -514,7 +524,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Maya Ka'an/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -529,7 +539,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Maya Ka'an/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

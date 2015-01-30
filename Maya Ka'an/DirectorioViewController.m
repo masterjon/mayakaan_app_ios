@@ -29,6 +29,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UILabel *viewTitle = [[UILabel alloc] init];
+    viewTitle.textColor = [UIColor whiteColor];
+    viewTitle.text=NSLocalizedString(@"Directorio", nil);
+    self.navigationItem.titleView=viewTitle;
+    [viewTitle sizeToFit];
     self.items = [[NSMutableArray alloc] init];
     NSArray *directoryItems=
             @[
@@ -482,7 +487,7 @@
             i=i+15;
 
         }
-        NSLog(@"%i -- %@",i,section[@"section"]);
+       // NSLog(@"%i -- %@",i,section[@"section"]);
         viewOfSection.frame = CGRectMake(0, 0, self.view.frame.size.width-40, i );
         KMSection *section3 = [[KMSection alloc] init];
         section3.view = viewOfSection;

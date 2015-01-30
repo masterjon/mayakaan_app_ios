@@ -329,7 +329,7 @@
     
     
     
-    NSLog(@"%@ -- %f",@"jon",screenBounds.size.width);
+    //NSLog(@"%@ -- %f",@"jon",screenBounds.size.width);
 
     //  initialMarginLeft = 18;
     
@@ -402,7 +402,7 @@
                  height=height+r.size.height;
                 
             }
-            NSLog(@"%f",r.size.height);
+           // NSLog(@"%f",r.size.height);
             
             // NSLog(@"%i",i);
             

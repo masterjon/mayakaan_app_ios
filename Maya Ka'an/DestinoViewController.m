@@ -5,8 +5,10 @@
 //  Created by Alberto Enriquez on 14/01/15.
 //  Copyright (c) 2015 Punk E-Marketing & Consulting. All rights reserved.
 //
-
+#define IDIOM    UI_USER_INTERFACE_IDIOM()
+#define IPAD     UIUserInterfaceIdiomPad
 #import "DestinoViewController.h"
+
 
 @interface DestinoViewController ()
 @property (strong, nonatomic) NSURLSession *session;
@@ -14,7 +16,6 @@
 @end
 
 @implementation DestinoViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     UILabel *viewTitle = [[UILabel alloc] init];
@@ -83,6 +84,10 @@
         NSArray *items2Share= @[shareText,mergedImage];
         UIActivityViewController *activityViewC = [[UIActivityViewController alloc] initWithActivityItems:items2Share applicationActivities:nil];
         activityViewC.excludedActivityTypes = @[];
+        if ( IDIOM == IPAD ) {
+            activityViewC.popoverPresentationController.barButtonItem = self.navigationItem.rightBarButtonItem;
+        }
+        
         [self presentViewController:activityViewC animated:YES completion:nil];
     }
 }

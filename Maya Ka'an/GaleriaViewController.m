@@ -19,6 +19,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UILabel *viewTitle = [[UILabel alloc] init];
+    viewTitle.textColor = [UIColor whiteColor];
+    viewTitle.text=NSLocalizedString(@"Galería", nil);
+    self.navigationItem.titleView=viewTitle;
+    [viewTitle sizeToFit];
+
     self.galeriaItems = [[NSMutableArray alloc] init];
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
                                                       message:NSLocalizedString(@"Necesitas activar tu conexión a internet.",nil)
@@ -132,6 +138,18 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
             left = 30;
             right = 30;
             break;
+        case 768:
+            NSLog(@"--Ipad Portrait");
+            left = 50;
+            right = 50;
+            top = 50;
+            break;
+        case 1024:
+            NSLog(@"--Ipad Landscape");
+            left = 50;
+            right = 50;
+            top = 50;
+            break;
         default:
             break;
     }
@@ -146,6 +164,22 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     View.tituloImagen = galeriaDictionary[@"nombre"];
     View.imagenUrl = galeriaDictionary[@"img_destino"];
 
+}
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    // Adjust cell size for orientation
+    int screenSize = (int) screenBounds.size.width;
+    //Size of cells for ipad
+    if(screenSize == 768 || screenSize == 1024){
+        return CGSizeMake(300.f, 196.f);
+    }
+    
+    //Size of cells for iphones
+    return CGSizeMake(155.f,104.f);
+    
 }
 /*
 #pragma mark - Navigation

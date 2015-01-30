@@ -143,6 +143,18 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
             left = 30;
             right = 30;
             break;
+        case 768:
+            NSLog(@"--Ipad Portrait");
+            left = 50;
+            right = 50;
+            top = 50;
+            break;
+        case 1024:
+            NSLog(@"--Ipad Landscape");
+            left = 50;
+            right = 50;
+            top = 50;
+            break;
         default:
             break;
     }
@@ -176,7 +188,22 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     }
 }
 
-
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    // Adjust cell size for orientation
+    int screenSize = (int) screenBounds.size.width;
+    //Size of cells for ipad
+    if(screenSize == 768 || screenSize == 1024){
+        return CGSizeMake(200.f, 250.f);
+    }
+    
+    //Size of cells for iphones
+    return CGSizeMake(155.f,147.f);
+    
+}
 /*
 #pragma mark - Navigation
 

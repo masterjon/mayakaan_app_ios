@@ -5,7 +5,8 @@
 //  Created by Alberto Enriquez on 09/01/15.
 //  Copyright (c) 2015 Punk E-Marketing & Consulting. All rights reserved.
 //
-
+#define IDIOM    UI_USER_INTERFACE_IDIOM()
+#define IPAD     UIUserInterfaceIdiomPad
 #import "MapViewController.h"
 
 @interface MapViewController ()
@@ -16,13 +17,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"fondo"]];
+    UILabel *viewTitle = [[UILabel alloc] init];
+    viewTitle.textColor = [UIColor whiteColor];
+    viewTitle.text=NSLocalizedString(@"Mapa", nil);
+    self.navigationItem.titleView=viewTitle;
+    [viewTitle sizeToFit];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"fondo1"]];
     self.navigationItem.rightBarButtonItem =  [[UIBarButtonItem alloc]
                                                initWithBarButtonSystemItem:UIBarButtonSystemItemAction
                                                target:self
                                                action:@selector(shareAction:)];
 
     // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,10 +43,13 @@
 -(IBAction)shareAction:(UIButton *)sender {
     
     NSString *shareText= NSLocalizedString(@"Descubre lugares increíbles en Maya Ka'an",nil);
-    UIImage *mergedImage = [UIImage imageNamed:@"mapa-mayakaan"];
+    UIImage *mergedImage = [UIImage imageNamed:@"mapa_mayakaan"];
     NSArray *items2Share= @[shareText,mergedImage];
     UIActivityViewController *activityViewC = [[UIActivityViewController alloc] initWithActivityItems:items2Share applicationActivities:nil];
     activityViewC.excludedActivityTypes = @[];
+    if ( IDIOM == IPAD ) {
+        activityViewC.popoverPresentationController.barButtonItem = self.navigationItem.rightBarButtonItem;
+    }
     [self presentViewController:activityViewC animated:YES completion:nil];
 }
 /*
