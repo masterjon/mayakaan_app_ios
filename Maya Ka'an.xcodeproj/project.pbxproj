@@ -15,6 +15,7 @@
 		FB79C8591A521D8100755704 /* DirectorioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB79C8581A521D8100755704 /* DirectorioViewController.m */; };
 		FBA85B0C1A72E031006FA661 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBA85B0E1A72E031006FA661 /* Localizable.strings */; };
 		FBA85B121A72F5E0006FA661 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA85B111A72F5E0006FA661 /* MBProgressHUD.m */; };
+		FBDAFA2B1A7C32A20077B2BA /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBDAFA2A1A7C32A20077B2BA /* Images-2.xcassets */; };
 		FBE18E111A66EDDF002970F8 /* DestinoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE18E101A66EDDF002970F8 /* DestinoViewController.m */; };
 		FBF182B11A7999F800799E7F /* BienvenidosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF182B01A7999F800799E7F /* BienvenidosViewController.m */; };
 		FBF353561A683E3200701034 /* EscapadasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF353551A683E3200701034 /* EscapadasViewController.m */; };
@@ -26,7 +27,6 @@
 		FBFB3D4C1A49F31E008DE9B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB3D4B1A49F31E008DE9B6 /* ViewController.m */; };
 		FBFB3D4F1A49F31E008DE9B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBFB3D4D1A49F31E008DE9B6 /* Main.storyboard */; };
 		FBFB3D511A49F31E008DE9B6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBFB3D501A49F31E008DE9B6 /* Images.xcassets */; };
-		FBFB3D541A49F31E008DE9B6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBFB3D521A49F31E008DE9B6 /* LaunchScreen.xib */; };
 		FBFB3D601A49F31F008DE9B6 /* Maya_Ka_anTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB3D5F1A49F31F008DE9B6 /* Maya_Ka_anTests.m */; };
 		FBFE07A21A530A7D00CF3AC0 /* KMSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFE07961A530A7D00CF3AC0 /* KMSectionHeaderView.m */; };
 		FBFE07A31A530A7D00CF3AC0 /* KMSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBFE07971A530A7D00CF3AC0 /* KMSectionHeaderView.xib */; };
@@ -62,14 +62,12 @@
 		FB79C8571A521D8100755704 /* DirectorioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorioViewController.h; sourceTree = "<group>"; };
 		FB79C8581A521D8100755704 /* DirectorioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectorioViewController.m; sourceTree = "<group>"; };
 		FBA85B011A72D732006FA661 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		FBA85B031A72DDFA006FA661 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FBA85B101A72F5E0006FA661 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		FBA85B111A72F5E0006FA661 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		FBA85B141A73247C006FA661 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		FBA85B171A7324BB006FA661 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Main.strings"; sourceTree = "<group>"; };
 		FBA85B1C1A7324FC006FA661 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		FBA85B1D1A73252B006FA661 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		FBA85B1E1A73253F006FA661 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "es-MX"; path = "es-MX.lproj/LaunchScreen.xib"; sourceTree = "<group>"; };
+		FBDAFA2A1A7C32A20077B2BA /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		FBE18E0F1A66EDDF002970F8 /* DestinoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinoViewController.h; sourceTree = "<group>"; };
 		FBE18E101A66EDDF002970F8 /* DestinoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinoViewController.m; sourceTree = "<group>"; };
 		FBF182AF1A7999F800799E7F /* BienvenidosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BienvenidosViewController.h; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 		FBFB3D4B1A49F31E008DE9B6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FBFB3D4E1A49F31E008DE9B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FBFB3D501A49F31E008DE9B6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FBFB3D531A49F31E008DE9B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FBFB3D591A49F31F008DE9B6 /* Maya Ka'anTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Maya Ka'anTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBFB3D5E1A49F31F008DE9B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBFB3D5F1A49F31F008DE9B6 /* Maya_Ka_anTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Maya_Ka_anTests.m; sourceTree = "<group>"; };
@@ -166,7 +163,6 @@
 				FBFB3D4B1A49F31E008DE9B6 /* ViewController.m */,
 				FBFB3D4D1A49F31E008DE9B6 /* Main.storyboard */,
 				FBFB3D501A49F31E008DE9B6 /* Images.xcassets */,
-				FBFB3D521A49F31E008DE9B6 /* LaunchScreen.xib */,
 				FBFB3D431A49F31E008DE9B6 /* Supporting Files */,
 				FB79C8541A51CDBA00755704 /* DestinosViewController.h */,
 				FB79C8551A51CDBA00755704 /* DestinosViewController.m */,
@@ -191,6 +187,7 @@
 				FBA85B0E1A72E031006FA661 /* Localizable.strings */,
 				FBF182AF1A7999F800799E7F /* BienvenidosViewController.h */,
 				FBF182B01A7999F800799E7F /* BienvenidosViewController.m */,
+				FBDAFA2A1A7C32A20077B2BA /* Images-2.xcassets */,
 			);
 			path = "Maya Ka'an";
 			sourceTree = "<group>";
@@ -343,9 +340,9 @@
 			files = (
 				FB005A7F1A7B250E00E79ABD /* inicio.png in Resources */,
 				FBA85B0C1A72E031006FA661 /* Localizable.strings in Resources */,
+				FBDAFA2B1A7C32A20077B2BA /* Images-2.xcassets in Resources */,
 				FBFB3D4F1A49F31E008DE9B6 /* Main.storyboard in Resources */,
 				FBFE07A31A530A7D00CF3AC0 /* KMSectionHeaderView.xib in Resources */,
-				FBFB3D541A49F31E008DE9B6 /* LaunchScreen.xib in Resources */,
 				FBFB3D511A49F31E008DE9B6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,17 +422,6 @@
 				FBA85B171A7324BB006FA661 /* es-MX */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FBFB3D521A49F31E008DE9B6 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FBFB3D531A49F31E008DE9B6 /* Base */,
-				FBA85B031A72DDFA006FA661 /* en */,
-				FBA85B1D1A73252B006FA661 /* es */,
-				FBA85B1E1A73253F006FA661 /* es-MX */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -521,10 +507,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Maya Ka'an/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -536,10 +523,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Maya Ka'an/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

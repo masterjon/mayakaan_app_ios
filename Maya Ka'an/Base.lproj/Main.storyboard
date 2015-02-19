@@ -511,7 +511,7 @@
                                             <constraint firstAttribute="height" constant="40" id="Jsm-dQ-Rcp"/>
                                             <constraint firstAttribute="width" constant="40" id="utR-I8-PmO"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="icono-directorio">
+                                        <state key="normal" title="Button" image="icono_directorio">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -524,7 +524,7 @@
                                             <constraint firstAttribute="width" constant="40" id="FKb-EE-BN3"/>
                                             <constraint firstAttribute="height" constant="40" id="coy-WL-o08"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="icono-mapa">
+                                        <state key="normal" title="Button" image="icono_mapa">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -537,7 +537,7 @@
                                             <constraint firstAttribute="width" constant="40" id="I7R-rm-gaN"/>
                                             <constraint firstAttribute="height" constant="40" id="Ueo-V1-RaA"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="icono-galeria">
+                                        <state key="normal" title="Button" image="icono_galeria">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -611,7 +611,7 @@
                                             </mask>
                                         </variation>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0h-Wm-yqU">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0h-Wm-yqU">
                                         <rect key="frame" x="8" y="347" width="584" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="atj-iD-4gf"/>
@@ -641,7 +641,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1d-3F-qcW">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1d-3F-qcW">
                                         <rect key="frame" x="8" y="435" width="584" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="6cR-jI-SrO"/>
@@ -864,7 +864,7 @@
                                             <constraint firstAttribute="width" constant="40" id="Ewn-Eg-XD4"/>
                                             <constraint firstAttribute="height" constant="40" id="aFX-l0-YLh"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="icono-mapa">
+                                        <state key="normal" title="Button" image="icono_mapa">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -877,7 +877,7 @@
                                             <constraint firstAttribute="height" constant="40" id="Chu-Ff-4Hn"/>
                                             <constraint firstAttribute="width" constant="40" id="ZYM-pu-Iye"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="icono-galeria">
+                                        <state key="normal" title="Button" image="icono_galeria">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -890,7 +890,7 @@
                                             <constraint firstAttribute="width" constant="40" id="sKt-HX-iT4"/>
                                             <constraint firstAttribute="height" constant="40" id="wi6-UV-Zjv"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="icono-directorio">
+                                        <state key="normal" title="Button" image="icono_directorio">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -974,7 +974,7 @@
                                             </mask>
                                         </variation>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzm-FU-QJE">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzm-FU-QJE">
                                         <rect key="frame" x="10" y="347" width="582" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="WPp-7E-cOO"/>
@@ -989,7 +989,7 @@
                                             </mask>
                                         </variation>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3K-hc-9j2">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3K-hc-9j2">
                                         <rect key="frame" x="8" y="435" width="584" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="BjV-BJ-kEJ"/>
@@ -1201,16 +1201,16 @@
     </scenes>
     <resources>
         <image name="bienvenidos" width="640" height="960"/>
-        <image name="icono-directorio" width="132" height="133"/>
-        <image name="icono-galeria" width="132" height="133"/>
         <image name="icono-logo" width="538" height="102"/>
-        <image name="icono-mapa" width="132" height="133"/>
+        <image name="icono_directorio" width="264" height="266"/>
+        <image name="icono_galeria" width="264" height="266"/>
+        <image name="icono_mapa" width="264" height="266"/>
         <image name="mapa_mayakaan" width="612" height="608"/>
         <image name="plantita" width="21" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QwV-Z0-F1p"/>
-        <segue reference="41h-Eq-U5W"/>
         <segue reference="60I-p6-pQG"/>
+        <segue reference="41h-Eq-U5W"/>
+        <segue reference="QwV-Z0-F1p"/>
     </inferredMetricsTieBreakers>
 </document>

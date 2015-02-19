@@ -97,6 +97,10 @@
 clickedButtonAtIndex:(NSInteger)buttonIndex{
     [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
+-(UIView *) viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return self.galleryImageView;
+}
 /*
 #pragma mark - Navigation
 

@@ -94,7 +94,8 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
         NSURL *imageUrl = [NSURL URLWithString:imageUrlString
                                  relativeToURL:[NSURL URLWithString:@"http://mayakaan.travel/mayakaan_api/media/"]];
         NSURLRequest *imageUrlRequest = [NSURLRequest requestWithURL:imageUrl];
-        
+        imageView.image = [UIImage imageNamed:@"fondofotos"];
+        label.text = @"";
         
         NSURLSessionDataTask *task = [self.session dataTaskWithRequest:imageUrlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
             NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
