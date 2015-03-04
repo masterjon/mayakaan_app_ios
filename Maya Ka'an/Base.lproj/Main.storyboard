@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bGY-Az-8F5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bGY-Az-8F5">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
@@ -596,21 +596,6 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Juh-jQ-Avl">
-                                        <rect key="frame" x="10" y="176" width="580" height="133"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="136" id="s9i-aH-LzF"/>
-                                        </constraints>
-                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sapien urna, sagittis eget nulla ac, elementum bibendum nibh. Maecenas quis rhoncus ligula. Aenean metus leo, vestibulum eu consequat sed, rutrum ac nunc. In quis sapien mattis, sagittis felis at, scelerisque justo. In hac habitasse platea dictumst. Curabitur bibendum, lacus et scelerisque accumsan, lectus sem pretium mauris, at gravida massa risus eget urna. Morbi blandit, lectus eu tristique ultricies, lectus orci feugiat lacus, eu laoreet eros orci vitae odio. Mauris ultrices tincidunt nisi, at pharetra urna blandit fermentum. </string>
-                                        <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="s9i-aH-LzF"/>
-                                            </mask>
-                                        </variation>
-                                    </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0h-Wm-yqU">
                                         <rect key="frame" x="8" y="347" width="584" height="50"/>
                                         <constraints>
@@ -671,6 +656,21 @@
                                             </mask>
                                         </variation>
                                     </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Juh-jQ-Avl">
+                                        <rect key="frame" x="10" y="178" width="580" height="133"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="136" id="s9i-aH-LzF"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sapien urna, sagittis eget nulla ac, elementum bibendum nibh. Maecenas quis rhoncus ligula. Aenean metus leo, vestibulum eu consequat sed, rutrum ac nunc. In quis sapien mattis, sagittis felis at, scelerisque justo. In hac habitasse platea dictumst. Curabitur bibendum, lacus et scelerisque accumsan, lectus sem pretium mauris, at gravida massa risus eget urna. Morbi blandit, lectus eu tristique ultricies, lectus orci feugiat lacus, eu laoreet eros orci vitae odio. Mauris ultrices tincidunt nisi, at pharetra urna blandit fermentum. </string>
+                                        <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="s9i-aH-LzF"/>
+                                            </mask>
+                                        </variation>
+                                    </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="HZ5-Gb-eYv" firstAttribute="top" secondItem="JD1-qL-ngd" secondAttribute="bottom" constant="8" id="2Qz-XS-qpp"/>
@@ -957,23 +957,6 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWd-aS-tNk">
-                                        <rect key="frame" x="10" y="176" width="580" height="133"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="314" id="8hY-Qo-nqD"/>
-                                            <constraint firstAttribute="height" constant="318" id="Zme-yQ-qXb"/>
-                                        </constraints>
-                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sapien urna, sagittis eget nulla ac, elementum bibendum nibh. Maecenas quis rhoncus ligula. Aenean metus leo, vestibulum eu consequat sed, rutrum ac nunc. In quis sapien mattis, sagittis felis at, scelerisque justo. In hac habitasse platea dictumst. Curabitur bibendum, lacus et scelerisque accumsan, lectus sem pretium mauris, at gravida massa risus eget urna. Morbi blandit, lectus eu tristique ultricies, lectus orci feugiat lacus, eu laoreet eros orci vitae odio. Mauris ultrices tincidunt nisi, at pharetra urna blandit fermentum. </string>
-                                        <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="8hY-Qo-nqD"/>
-                                                <exclude reference="Zme-yQ-qXb"/>
-                                            </mask>
-                                        </variation>
-                                    </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzm-FU-QJE">
                                         <rect key="frame" x="10" y="347" width="582" height="50"/>
                                         <constraints>
@@ -1034,6 +1017,23 @@
                                             </mask>
                                         </variation>
                                     </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWd-aS-tNk">
+                                        <rect key="frame" x="62" y="186" width="580" height="133"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="314" id="8hY-Qo-nqD"/>
+                                            <constraint firstAttribute="height" constant="318" id="Zme-yQ-qXb"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sapien urna, sagittis eget nulla ac, elementum bibendum nibh. Maecenas quis rhoncus ligula. Aenean metus leo, vestibulum eu consequat sed, rutrum ac nunc. In quis sapien mattis, sagittis felis at, scelerisque justo. In hac habitasse platea dictumst. Curabitur bibendum, lacus et scelerisque accumsan, lectus sem pretium mauris, at gravida massa risus eget urna. Morbi blandit, lectus eu tristique ultricies, lectus orci feugiat lacus, eu laoreet eros orci vitae odio. Mauris ultrices tincidunt nisi, at pharetra urna blandit fermentum. </string>
+                                        <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="8hY-Qo-nqD"/>
+                                                <exclude reference="Zme-yQ-qXb"/>
+                                            </mask>
+                                        </variation>
+                                    </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="CCD-d0-F1T" secondAttribute="centerX" id="0x7-KY-g5O"/>

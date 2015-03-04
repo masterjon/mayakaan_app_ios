@@ -42,17 +42,12 @@
       @{
           @"section":@"CHUNHUHUB",
           @"content":
-              @[ NSLocalizedString(@"-Bloqueador biodegradable",nil),
-                 NSLocalizedString(@"-Repelente biodegradable",nil),
-                 NSLocalizedString(@"-Pantalones de tela ligera o de campo",nil),
-                 NSLocalizedString(@"-Ropa cómoda",nil),
-                 NSLocalizedString(@"-Sandalias",nil),
-                 NSLocalizedString(@"-Gorra",nil),
-                 NSLocalizedString(@"-Cámara fotográfica",nil),
-                 NSLocalizedString(@"-Traje de baño",nil),
+              @[
+                 NSLocalizedString(@"-Zapatos cómodos y Sandalias",nil),
                  NSLocalizedString(@"-Toalla",nil),
                  NSLocalizedString(@"-Opción de hospedaje en cabañas rústicas",nil),
-                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil)
+                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil),
+                 NSLocalizedString(@"-En el centro ecoturístico NO hay señal móvil ni Internet",nil)
                 ]
           },
       
@@ -60,18 +55,12 @@
       @{
           @"section":@"FELIPE CARRILLO PUERTO",
           @"content":
-              @[ NSLocalizedString(@"-Bloqueador biodegradable",nil),
-                 NSLocalizedString(@"-Repelente biodegradable",nil),
-                 NSLocalizedString(@"-Pantalones de tela ligera o de campo",nil),
-                 NSLocalizedString(@"-Ropa cómoda",nil),
-                 NSLocalizedString(@"-Sandalias",nil),
-                 NSLocalizedString(@"-Gorra",nil),
-                 NSLocalizedString(@"-Cámara fotográfica",nil),
-                 NSLocalizedString(@"-Traje de baño",nil),
+              @[ NSLocalizedString(@"-Zapatos cómodos y Sandalias",nil),
                  NSLocalizedString(@"-Toalla",nil),
                  NSLocalizedString(@"-Opción de hospedaje en cabañas rústicas",nil),
                  NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil),
-                 NSLocalizedString(@"-En el Santuario de la Cruz Parlante no esta permitido el acceso con zapatos, ni tomar fotografías",nil)
+                 NSLocalizedString(@"-En el Santuario de la Cruz Parlante no esta permitido el acceso con zapatos, ni tomar fotografías sin autorización",nil),
+                 NSLocalizedString(@"-En los centros ecoturísticos NO hay señal móvil ni Internet", nill)
                 ]
           },
       
@@ -79,15 +68,12 @@
       @{
           @"section":@"KANTEMÓ",
           @"content":
-              @[ NSLocalizedString(@"-Repelente biodegradable",nil),
+              @[
                  NSLocalizedString(@"-Zapatos cómodos",nil),
-                 NSLocalizedString(@"-Pantalones",nil),
-                 NSLocalizedString(@"-Cámara fotográfica o de video",nil),
-                 NSLocalizedString(@"-Traje de baño",nil),
-                 NSLocalizedString(@"-Toalla",nil),
-                 NSLocalizedString(@"-Ropa para cambiarse",nil),
-                 NSLocalizedString(@"-Binoculares",nil),
-                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil)
+                 NSLocalizedString(@"-Pantalones largos",nil),
+                 NSLocalizedString(@"-Lámpara",nil),
+                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil),
+                 NSLocalizedString(@"-No están permitidas las fotografías con flash ya que perturban a las especies", nill)
                 ]
           },
       
@@ -95,15 +81,12 @@
       @{
           @"section":@"MUYIL",
           @"content":
-              @[ NSLocalizedString(@"-Bloqueador biodegradable",nil),
-                 NSLocalizedString(@"-Repelente biodegradable",nil),
-                 NSLocalizedString(@"-Ropa y zapatos cómodos",nil),
-                 NSLocalizedString(@"-Gorra",nil),
-                 NSLocalizedString(@"-Cámara fotográfica o de video",nil),
-                 NSLocalizedString(@"-Traje de baño",nil),
+              @[ NSLocalizedString(@"-Zapatos cómodos y Sandalias",nil),
                  NSLocalizedString(@"-Toalla",nil),
                  NSLocalizedString(@"-Ropa para cambiarse",nil),
-                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil)
+                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil),
+                 NSLocalizedString(@"-Se aceptan tarjetas de crédito",nil),
+                 NSLocalizedString(@"-En la comunidad NO hay señal móvil ni Internet",nil),
                 ]
           },
       
@@ -111,61 +94,45 @@
       @{
           @"section":@"NOH-BEC",
           @"content":
-              @[ NSLocalizedString(@"-Repelente biodegradable",nil),
-                 NSLocalizedString(@"-Ropa y zapatos cómodos",nil),
-                 NSLocalizedString(@"-Cámara fotográfica o de video",nil),
-                 NSLocalizedString(@"-Traje de baño",nil),
+              @[ NSLocalizedString(@"-Zapatos cómodos y Sandalias",nil),
                  NSLocalizedString(@"-Toalla",nil),
-                 NSLocalizedString(@"-Ropa para cambiarse",nil),
-                 NSLocalizedString(@"-Binoculares",nil),
-                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil)
+                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil),
+                 NSLocalizedString(@"-En la comunidad NO hay señal móvil",nil)
                 ]
+          },
+      
+      @{
+          @"section":@"BAHIA DEL ESPIRITU SANTO",
+          @"content":
+              @[ NSLocalizedString(@"-Zapatos cómodos y Sandalias",nil),
+                 NSLocalizedString(@"-Toalla",nil),
+                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil),
+                 NSLocalizedString(@"-En la comunidad NO hay señal móvil ni Internet ",nil),
+                 NSLocalizedString(@"-La comunidad no cuenta con energía eléctrica, únicamente solar por lo que las horas de luz son limitadas",nil)
+                 ]
           },
       
       
       @{
           @"section":@"PUNTA ALLEN",
           @"content":
-              @[ NSLocalizedString(@"-Bloqueador biodegradable",nil),
-                 NSLocalizedString(@"-Repelente biodegradable",nil),
-                 NSLocalizedString(@"-Ropa y zapatos cómodos",nil),
-                 NSLocalizedString(@"-Gorra",nil),
-                 NSLocalizedString(@"-Cámara fotográfica o de video",nil),
-                 NSLocalizedString(@"-Traje de baño",nil),
+              @[ NSLocalizedString(@"-Zapatos cómodos y Sandalias",nil),
                  NSLocalizedString(@"-Toalla",nil),
-                 NSLocalizedString(@"-Ropa para cambiarse",nil),
-                 NSLocalizedString(@"-Lentes para sol",nil),
-                 NSLocalizedString(@"-Binoculares",nil),
-                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil)
+                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil),
+                 NSLocalizedString(@"-En la comunidad NO hay señal móvil ni Internet",nil),
+                 NSLocalizedString(@"Solo hay luz eléctrica en ciertos horarios del día", nil)
                 ]
           },
       
       
-      @{
-          @"section":@"PUNTA HERRERO",
-          @"content":
-              @[ NSLocalizedString(@"-Repelente biodegradable",nil),
-                 NSLocalizedString(@"-Ropa y zapatos cómodos",nil),
-                 NSLocalizedString(@"-Cámara fotográfica o de video",nil),
-                 NSLocalizedString(@"-Traje de baño",nil),
-                 NSLocalizedString(@"-Toalla",nil),
-                 NSLocalizedString(@"-Ropa para cambiarse",nil),
-                 NSLocalizedString(@"-Binoculares",nil),
-                 NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil)
-                ]
-          },
+
       
       
       @{
           @"section":@"SEÑOR",
           @"content":
-              @[ NSLocalizedString(@"-Repelente biodegradable",nil),
-                 NSLocalizedString(@"-Ropa y zapatos cómodos",nil),
-                 NSLocalizedString(@"-Cámara fotográfica o de video",nil),
-                 NSLocalizedString(@"-Traje de baño",nil),
-                 NSLocalizedString(@"-Toalla",nil),
-                 NSLocalizedString(@"-Ropa para cambiarse",nil),
-                 NSLocalizedString(@"-Binoculares",nil),
+              @[
+                 NSLocalizedString(@"-Zapatos cómodos",nil),
                  NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil)
                 ]
           },
@@ -174,11 +141,7 @@
       @{
           @"section":@"TIHOSUCO",
           @"content":
-              @[ NSLocalizedString(@"-Ropa cómoda",nil),
-                 NSLocalizedString(@"-Zapatos deportivos",nil),
-                 NSLocalizedString(@"-Sandalias",nil),
-                 NSLocalizedString(@"-Gorra",nil),
-                 NSLocalizedString(@"-Cámara fotográfica",nil),
+              @[ NSLocalizedString(@"-Zapatos cómodos",nil),
                  NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil)
                 ]
           },
