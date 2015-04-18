@@ -83,13 +83,19 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     
 }
 -(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"escapadaCell" forIndexPath:indexPath];
     UIImageView *imageView = (UIImageView *) [cell viewWithTag:10];
     UILabel *label = (UILabel *) [cell viewWithTag:11];
-    
+    NSString *destinoLabel;
     if ([self.escapadasItems count] > 0){
         NSDictionary *cellDictionary = [self.escapadasItems objectAtIndex:indexPath.row];
-        NSString *destinoLabel = [cellDictionary objectForKey:@"nombre"];
+        if ([language isEqualToString:@"es-MX"] || [language isEqualToString:@"es"]) {
+            destinoLabel = [cellDictionary objectForKey:@"nombre"];
+        }
+        else{
+            destinoLabel = [cellDictionary objectForKey:@"nombre_en"];
+        }
         NSString *imageUrlString = [cellDictionary objectForKey:@"img_portada"];
         NSURL *imageUrl = [NSURL URLWithString:imageUrlString
                                  relativeToURL:[NSURL URLWithString:@"http://mayakaan.travel/mayakaan_api/media/"]];
@@ -170,21 +176,19 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     NSArray *arrayOfIndexPaths = [self.EscapadasCollection indexPathsForSelectedItems];
     NSIndexPath *path = [arrayOfIndexPaths firstObject];
     NSDictionary *escapdaDictionary = [self.escapadasItems objectAtIndex:path.row];
-    View.tituloEscapada = escapdaDictionary[@"nombre"];
-    View.descriptionEscapada = escapdaDictionary[@"des_cripcion"];
     View.imagenEscapada = escapdaDictionary[@"img_destino"];
-    View.ubicacionEscapada = escapdaDictionary[@"ubicacion"];
-    View.actividadesEscapada = escapdaDictionary[@"actividades"];
+ 
     if ([language isEqualToString:@"es-MX"] || [language isEqualToString:@"es"]) {
+        View.tituloEscapada = escapdaDictionary[@"nombre"];
         View.descriptionEscapada = escapdaDictionary[@"des_cripcion"];
         View.ubicacionEscapada = escapdaDictionary[@"ubicacion"];
         View.actividadesEscapada = escapdaDictionary[@"actividades"];
     }
     else{
-    
+        View.tituloEscapada = escapdaDictionary[@"nombre_en"];
         View.descriptionEscapada = escapdaDictionary[@"des_cripcion_en"];
         View.ubicacionEscapada = escapdaDictionary[@"ubicacion_en"];
-        View.actividadesEscapada = escapdaDictionary[@"actividades:en"];
+        View.actividadesEscapada = escapdaDictionary[@"actividades_en"];
 
     }
 }

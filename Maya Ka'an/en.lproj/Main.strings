@@ -45,7 +45,7 @@
 "W0e-04-Yvk.title" = "Destination";
 
 /* Class = "IBUIButton"; normalTitle = "Ubicar en Mapas"; ObjectID = "Z01-CX-kSi"; */
-"Z01-CX-kSi.normalTitle" = "Locate in Mapas";
+"Z01-CX-kSi.normalTitle" = "Locate in Maps";
 
 /* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "apF-A4-cLd"; */
 "apF-A4-cLd.normalTitle" = "Button";

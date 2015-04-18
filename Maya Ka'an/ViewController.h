@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UIImageView *logoImage;
 @property (weak, nonatomic) IBOutlet UICollectionView *menuCollectionView;
 @property (strong,nonatomic) NSMutableArray *menuItems;
 @end

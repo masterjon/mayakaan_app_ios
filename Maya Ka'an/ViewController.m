@@ -23,6 +23,15 @@
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     [self.navigationController.navigationBar setBackgroundColor:[UIColor brownColor]];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navBar"]forBarMetrics:UIBarMetricsDefault];
+    
+    NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];
+    if ([language isEqualToString:@"es-MX"] || [language isEqualToString:@"es"]) {
+        self.logoImage.image = [UIImage imageNamed:@"icono-logo"];
+    }
+    else{
+        self.logoImage.image = [UIImage imageNamed:@"icono-logo-en"];
+    }
+    
     self.menuItems = [[NSMutableArray alloc] init];
     NSArray *menu = @[
                       @{

@@ -60,7 +60,7 @@
                  NSLocalizedString(@"-Opción de hospedaje en cabañas rústicas",nil),
                  NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil),
                  NSLocalizedString(@"-En el Santuario de la Cruz Parlante no esta permitido el acceso con zapatos, ni tomar fotografías sin autorización",nil),
-                 NSLocalizedString(@"-En los centros ecoturísticos NO hay señal móvil ni Internet", nill)
+                 NSLocalizedString(@"-En el centro ecoturístico NO hay señal móvil ni Internet", nill)
                 ]
           },
       
@@ -102,12 +102,12 @@
           },
       
       @{
-          @"section":@"BAHIA DEL ESPIRITU SANTO",
+          @"section":@"BAHÍA DEL ESPÍRITU SANTO",
           @"content":
               @[ NSLocalizedString(@"-Zapatos cómodos y Sandalias",nil),
                  NSLocalizedString(@"-Toalla",nil),
                  NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil),
-                 NSLocalizedString(@"-En la comunidad NO hay señal móvil ni Internet ",nil),
+                 NSLocalizedString(@"-En la comunidad NO hay señal móvil ni Internet",nil),
                  NSLocalizedString(@"-La comunidad no cuenta con energía eléctrica, únicamente solar por lo que las horas de luz son limitadas",nil)
                  ]
           },
@@ -120,7 +120,7 @@
                  NSLocalizedString(@"-Toalla",nil),
                  NSLocalizedString(@"-Personas con alguna reacción alérgica de piquetes de insectos (mosquitos, tábanos, abejas) llevar consigo el medicamento de su preferencia",nil),
                  NSLocalizedString(@"-En la comunidad NO hay señal móvil ni Internet",nil),
-                 NSLocalizedString(@"Solo hay luz eléctrica en ciertos horarios del día", nil)
+                 NSLocalizedString(@"-Solo hay luz eléctrica en ciertos horarios del día", nil)
                 ]
           },
       

@@ -87,10 +87,17 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"destinoCell" forIndexPath:indexPath];
     UIImageView *imageView = (UIImageView *) [cell viewWithTag:10];
     UILabel *label = (UILabel *) [cell viewWithTag:11];
-    
+    NSString *destinoLabel;
     if ([self.destinosItems count] > 0){
         NSDictionary *cellDictionary = [self.destinosItems objectAtIndex:indexPath.row];
-        NSString *destinoLabel = [cellDictionary objectForKey:@"nombre"];
+        NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];
+        if ([language isEqualToString:@"es-MX"] || [language isEqualToString:@"es"]) {
+            destinoLabel = [cellDictionary objectForKey:@"nombre"];
+        }
+        else{
+            destinoLabel = [cellDictionary objectForKey:@"nombre_en"];
+        }
+        
         NSString *imageUrlString = [cellDictionary objectForKey:@"img_portada"];
         NSURL *imageUrl = [NSURL URLWithString:imageUrlString
                                  relativeToURL:[NSURL URLWithString:@"http://mayakaan.travel/mayakaan_api/media/"]];
@@ -165,15 +172,17 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     NSArray *arrayOfIndexPaths = [self.DestinosCollection indexPathsForSelectedItems];
     NSIndexPath *path = [arrayOfIndexPaths firstObject];
     NSDictionary *destinoDictionary = [self.destinosItems objectAtIndex:path.row];
-    View.tituloDestino = destinoDictionary[@"nombre"];
+    
     View.imagenDestino = destinoDictionary[@"img_destino"];
     
     if ([language isEqualToString:@"es-MX"] || [language isEqualToString:@"es"]) {
+        View.tituloDestino = destinoDictionary[@"nombre"];
         View.descriptionDestino = destinoDictionary[@"des_cripcion"];
         View.actividadesDestino = destinoDictionary[@"actividades"];
         View.ubicacionDestino = destinoDictionary[@"ubicacion"];
     }
     else{
+        View.tituloDestino = destinoDictionary[@"nombre_en"];
         View.descriptionDestino = destinoDictionary[@"des_cripcion_en"];
         View.actividadesDestino = destinoDictionary[@"actividades_en"];
         View.ubicacionDestino = destinoDictionary[@"ubicacion_en"];
